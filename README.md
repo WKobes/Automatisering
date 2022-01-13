@@ -1,6 +1,6 @@
 # Automatisering documentatie
 
-In deze repository worden scripts bijgehouden om het publicatie- en controleprocess van documenten te automatiseren.
+In deze repository worden scripts bijgehouden om het publicatie- en controleproces van documenten te automatiseren.
 
 ## Automatische tests
 
