@@ -1,0 +1,23 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
+name: Check links
+jobs:
+  my-broken-link-checker:
+    name: Check broken links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: brew install muffet
+      - name: Check
+        run: muffet --json https://publicatie.centrumvoorstandaarden.nl/ > muffet.json
+        continue-on-error: true
+      - name: Report
+        run: python ./scripts/muffet-json.py
+      - run: rm muffet.json
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update links report
