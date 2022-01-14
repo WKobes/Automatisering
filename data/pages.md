@@ -1,46 +1,38 @@
-[OAuth-NL-profiel](https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot)
+[OAuth-NL-profiel](https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html)
 
-[API-Design-Rules](https://logius-standaarden.github.io/API-Design-Rules/snapshot)
+[API-Design-Rules](https://logius-standaarden.github.io/API-Design-Rules/snapshot.html)
 
-[Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur/snapshot)
+[Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur/snapshot.html)
 
-[Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API/snapshot)
+[Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API/snapshot.html)
 
-[OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel/snapshot)
+[OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel/snapshot.html)
 
-[Template-Repository](https://logius-standaarden.github.io/Template-Repository/snapshot)
+[Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/snapshot.html)
 
-[Respec-example-API-Designrules](https://logius-standaarden.github.io/Respec-example-API-Designrules/snapshot)
+[Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS/snapshot.html)
 
-[respec](https://logius-standaarden.github.io/respec/snapshot)
+[Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/snapshot.html)
 
-[Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/snapshot)
+[Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/snapshot.html)
 
-[Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS/snapshot)
+[Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/snapshot.html)
 
-[Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/snapshot)
+[Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance](https://logius-standaarden.github.io/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance/snapshot.html)
 
-[Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/snapshot)
+[Digikoppeling-Best-Practices-WUS](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-WUS/snapshot.html)
 
-[Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/snapshot)
+[Digikoppeling-Best-Practices-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-ebMS2/snapshot.html)
 
-[Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance](https://logius-standaarden.github.io/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance/snapshot)
+[Digikoppeling-Best-Practices-GB](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-GB/snapshot.html)
 
-[Digikoppeling-Best-Practices-WUS](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-WUS/snapshot)
+[Digikoppeling-Gebruik-en-achtergrond-certificaten](https://logius-standaarden.github.io/Digikoppeling-Gebruik-en-achtergrond-certificaten/snapshot.html)
 
-[Digikoppeling-Best-Practices-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-ebMS2/snapshot)
+[Digikoppeling-Wat-is-Digikoppeling](https://logius-standaarden.github.io/Digikoppeling-Wat-is-Digikoppeling/snapshot.html)
 
-[Digikoppeling-Best-Practices-GB](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-GB/snapshot)
+[Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel/snapshot.html)
 
-[Digikoppeling-Gebruik-en-achtergrond-certificaten](https://logius-standaarden.github.io/Digikoppeling-Gebruik-en-achtergrond-certificaten/snapshot)
+[ADR-Beheermodel](https://logius-standaarden.github.io/ADR-Beheermodel/snapshot.html)
 
-[Digikoppeling-Wat-is-Digikoppeling](https://logius-standaarden.github.io/Digikoppeling-Wat-is-Digikoppeling/snapshot)
-
-[DMKS-Koppelvlakspecifcatie](https://logius-standaarden.github.io/DMKS-Koppelvlakspecifcatie/snapshot)
-
-[Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel/snapshot)
-
-[ADR-Beheermodel](https://logius-standaarden.github.io/ADR-Beheermodel/snapshot)
-
-[OAuth-Beheermodel](https://logius-standaarden.github.io/OAuth-Beheermodel/snapshot)
+[OAuth-Beheermodel](https://logius-standaarden.github.io/OAuth-Beheermodel/snapshot.html)
 
