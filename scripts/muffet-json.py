@@ -7,7 +7,7 @@ content = ''
 with open('muffet.json') as file:
     data = json.load(file)
     for page in data:
-        if (re.search("\.nl\/[a-z]+\/[a-z]+\/$|vv", page['url'])):
+        if (re.search("\.nl\/[a-z]+\/[a-z]+\/$|vv|github\.io", page['url'])):
             content += '### ' + page['url'] + '\n'
             for link in page['links']:            
                 errors += 1
