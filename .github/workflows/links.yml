@@ -5,12 +5,18 @@ on:
 
 name: Check links
 jobs:
-  my-broken-link-checker:
-    name: Check broken links
+    name: Check links
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: brew install muffet
+      - name: Check drafts
+        run: muffet --json https://logius-standaarden.github.io/Automatisering/data/pages > muffet.json
+        continue-on-error: true
+      - name: Report drafts
+        run: python ./scripts/muffet-json.py
+      - run: rm muffet.json
+      - run: mv links.md links-drafts.md
       - name: Check
         run: muffet --json https://publicatie.centrumvoorstandaarden.nl/ > muffet.json
         continue-on-error: true
