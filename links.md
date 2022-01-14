@@ -1,13 +1,4 @@
-## 47 broken links
-
-### https://publicatie.centrumvoorstandaarden.nl/dk/restapi/
-* https://centrumvoorstandaarden.github.io/DigikoppelingRestfulApiProfiel/ `404`
-
-* https://logius-standaarden.github.io/API-Design-Rules/#api-51 `id #api-51 not found`
-
-* https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf `404`
-
-* https://github.com/centrumvoorstandaarden/DigikoppelingRestfulApiProfiel/blob/master/DK_REST_API_totaal.md#bijlage-gebruik-van-signing--encryptie-in-de-context-van-http--rest-api `404 (following redirect https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/blob/master/DK_REST_API_totaal.md)`
+## 55 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
@@ -22,30 +13,26 @@
 
 * https://github.com/Logius-standaarden/%3Crepository%3E/issues/ `404`
 
-### https://publicatie.centrumvoorstandaarden.nl/api/oauth/
-* http://localhost/ `dial tcp4 127.0.0.1:80: connect: connection refused`
+### https://publicatie.centrumvoorstandaarden.nl/dk/oin/
+* http://www.digitaleoverheid.nl=""> `lookup www.digitaleoverheid.nl="">: no such host`
 
-* https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms `403`
+* https://www.logius.nl/sites/default/files/public/bestanden/diensten/PKIoverheid/PvE%20EN%20part3j%20v4.8%20DEF.pdf `404`
 
-### https://publicatie.centrumvoorstandaarden.nl/dk/gb/
-* https://my.host.nl/files/file.pdf.z01 `lookup my.host.nl: No address associated with hostname`
+* https://digitaleoverheid.pleio.nl/file/group/30207952/all#41536872 `404`
 
-* https://my.host.nl/files/file.pdf.zip `lookup my.host.nl: No address associated with hostname`
-
-* https://my.host.nl/files/file.001.zip `lookup my.host.nl: No address associated with hostname`
-
-* https://my.host.nl/files/file.002.zip `lookup my.host.nl: No address associated with hostname`
-
-* https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf `404`
-
-### https://publicatie.centrumvoorstandaarden.nl/dk/gbachtcert/
-* https://knowledge.verisign.com/support/ssl-certificates-support/index?page=content&id=AR235 `lookup knowledge.verisign.com: no such host`
+* https://publicatie.centrumvoorstandaarden.nl/dk/oin/s `404`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/wus/
 * https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf `404`
 
-### https://publicatie.centrumvoorstandaarden.nl/dk/bpwus/
-* http://www.w3.org/TR/wsdlhttps://www.w3.org/TR/wsdl/#notation `404`
+### https://publicatie.centrumvoorstandaarden.nl/dk/restapi/
+* https://logius-standaarden.github.io/API-Design-Rules/#api-51 `id #api-51 not found`
+
+* https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf `404`
+
+* https://centrumvoorstandaarden.github.io/DigikoppelingRestfulApiProfiel/ `404`
+
+* https://github.com/centrumvoorstandaarden/DigikoppelingRestfulApiProfiel/blob/master/DK_REST_API_totaal.md#bijlage-gebruik-van-signing--encryptie-in-de-context-van-http--rest-api `404 (following redirect https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/blob/master/DK_REST_API_totaal.md)`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/watisdk/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
@@ -62,40 +49,19 @@
 
 * http://e-overheid.nl/images/stories/Publicaties/rapport_%20kba_def.pdf `404 (following redirect https://www.e-overheid.nl/images/stories/Publicaties/rapport_%20kba_def.pdf)`
 
-### https://publicatie.centrumvoorstandaarden.nl/dk/bpgb/
-* https://my.host.nl/2010/09/01/f47ac10b-58cc-4372-a567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
+### https://publicatie.centrumvoorstandaarden.nl/dk/bpwus/
+* http://www.w3.org/TR/wsdlhttps://www.w3.org/TR/wsdl/#notation `404`
 
-* https://my.host.nl/f47ac10b-58cc-**4**372-**a**567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
+### https://publicatie.centrumvoorstandaarden.nl/dk/bpgb/
+* https://my.host.nl:8443/f47ac10b-58cc-4372-a567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
+
+* https://my.host.nl/2010/09/01/f47ac10b-58cc-4372-a567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
 
 * https://my.host.nl/01234567890123456789/f47ac10b-58cc-4372-a567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
 
-* https://my.host.nl:8443/f47ac10b-58cc-4372-a567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
+* https://my.host.nl/f47ac10b-58cc-**4**372-**a**567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
 
 * http://www.stelselhandboek.nl `lookup www.stelselhandboek.nl: no such host`
-
-### https://publicatie.centrumvoorstandaarden.nl/dk/oin/
-* http://www.digitaleoverheid.nl=""> `lookup www.digitaleoverheid.nl="">: no such host`
-
-* https://www.logius.nl/sites/default/files/public/bestanden/diensten/PKIoverheid/PvE%20EN%20part3j%20v4.8%20DEF.pdf `404`
-
-* https://digitaleoverheid.pleio.nl/file/group/30207952/all#41536872 `404`
-
-* https://publicatie.centrumvoorstandaarden.nl/dk/oin/s `404`
-
-### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/
-* https://lijsten.forumstandaardisatie.nl/open-standaarden/digikoppeling `lookup lijsten.forumstandaardisatie.nl: no such host`
-
-* http://www.logius.nl="" `lookup www.logius.nl="": no such host`
-
-* http://nl.wikipedia.org/wiki/Protocol#computerprotocol `id #computerprotocol not found`
-
-* https://www.w3.org/TR/architectuur/ `404`
-
-* https://github.com/Logius-standaarden/Digikoppeling-Architectuur/commits/gh-pages `404`
-
-* https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/Digikoppeling-Architectuur.pdf `404`
-
-* http://www.wikixl.nl/wiki/nora/index.php/Basisprincipes `403 (following redirect https://www.wikixl.nl/wiki/nora/index.php/Basisprincipes)`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/ebms/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
@@ -107,4 +73,55 @@
 * https://publicatie.centrumvoorstandaarden.nl/dk/ebms/www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf `404`
 
 * http://www.ean-ucc.org/roles/seller%5C `dialing to the given TCP address timed out`
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/gb/
+* https://my.host.nl/files/file.pdf.z01 `lookup my.host.nl: No address associated with hostname`
+
+* https://my.host.nl/files/file.002.zip `lookup my.host.nl: No address associated with hostname`
+
+* https://my.host.nl/files/file.pdf.zip `lookup my.host.nl: No address associated with hostname`
+
+* https://my.host.nl/files/file.001.zip `lookup my.host.nl: No address associated with hostname`
+
+* https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf `404`
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/gbachtcert/
+* https://knowledge.verisign.com/support/ssl-certificates-support/index?page=content&id=AR235 `lookup knowledge.verisign.com: no such host`
+
+### https://publicatie.centrumvoorstandaarden.nl/api/oauth/
+* http://localhost/ `dial tcp4 127.0.0.1:80: connect: connection refused`
+
+* https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms `403`
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/
+* http://nl.wikipedia.org/wiki/Protocol#computerprotocol `id #computerprotocol not found`
+
+* https://lijsten.forumstandaardisatie.nl/open-standaarden/digikoppeling `lookup lijsten.forumstandaardisatie.nl: no such host`
+
+* http://www.logius.nl="" `lookup www.logius.nl="": no such host`
+
+* https://www.w3.org/TR/architectuur/ `404`
+
+* https://github.com/Logius-standaarden/Digikoppeling-Architectuur/commits/gh-pages `404`
+
+* http://www.wikixl.nl/wiki/nora/index.php/Basisprincipes `403 (following redirect https://www.wikixl.nl/wiki/nora/index.php/Basisprincipes)`
+
+* https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/Digikoppeling-Architectuur.pdf `404`
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/2.0vv/
+* https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf `404`
+
+* https://centrumvoorstandaarden.github.io/DigikoppelingRestfulApiProfiel/ `404`
+
+* https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340 `403`
+
+* http://nl.wikipedia.org/wiki/Protocol#computerprotocol `id #computerprotocol not found`
+
+* https://www.infoq.com/articles/no-reliable-messaging/ `404`
+
+* https://www.logius.nl/sites/default/files/public/bestanden/diensten/DigiKoppeling/Standaarden/Digikoppeling-Beheermodel.pdf `404`
+
+* https://www.noraonline.nl/wiki/Principes%5Dhttps://www.noraonline.nl/wiki/Principes `400`
+
+* https://register.digikoppeling.nl/registers `dialing to the given TCP address timed out`
 
