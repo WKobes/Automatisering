@@ -5,6 +5,7 @@ on:
 
 name: Check links
 jobs:
+  link-checker:
     name: Check links
     runs-on: ubuntu-latest
     steps:
