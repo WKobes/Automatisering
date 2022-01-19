@@ -88,5 +88,5 @@
 ### https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/snapshot.html
 * http://www.logius.nl/digikoppeling/documentatie `404 (following redirect https://logius.nl/digikoppeling/documentatie)`
 
-* http://www.ean-ucc.org/roles/seller%5C `dialing to the given TCP address timed out`
+* http://www.ean-ucc.org/roles/seller%5C `dialing to the given TCP address timed out` Ik stel voor deze link eruit te halen. Website bestaat niet meer en het is onduidelijk welke informatie hier precies bedoeld wordt. Het wordt ook maar als voorbeeld aangehaald.
 
