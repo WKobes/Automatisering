@@ -42,7 +42,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: git pull
-      - run: |
+      - name: Install muffet
+        run: |
          python3 -m http.server 8080 &
-         brew install muffet         
-         muffet --one-page-only http://localhost:8080/snapshot.html
+         brew install muffet
+      - name: Check links
+        run: muffet --one-page-only http://localhost:8080/snapshot.html
