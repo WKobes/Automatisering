@@ -14,19 +14,19 @@ body:
         - Beheermodel en Releasebeleid
         - Architectuur
         - Identificatie en Authenticatie
-    validation:
+    validations:
       required: true
   - type: input
     id: contact
     attributes:
       label: Naam
       description: Naam
-      validations:
-        required: false
+    validations:
+      required: true
   - type: input
     id: email
     attributes:
       label: Email
-      description: E-mail adres 
-      validations:
-        required: true
+      description: E-mail adres
+    validations:
+      required: true
