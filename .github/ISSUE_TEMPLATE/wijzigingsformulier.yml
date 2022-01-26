@@ -16,6 +16,15 @@ body:
         - Identificatie en Authenticatie
     validations:
       required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Omschrijving
+      description: Wat is de voorgestelde wijziging? Op welke pagina of sectie staat het?
+      placeholder: Beschrijving van de wijziging inclusief de plaats in het document.
+      value: Schreiffaut
+    validations:
+      required: true
   - type: input
     id: contact
     attributes:
