@@ -14,10 +14,21 @@ body:
         - Beheermodel en Releasebeleid
         - Architectuur
         - Identificatie en Authenticatie
+        - Beveiliging standaarden en voorschriften
+        - Koppelvlakstandaard WUS
     validations:
       required: true
+- type: checkboxes
+  id: standaard
+  attributes:
+    label: Standaard
+    description: Kies één van de standaarden waarop de wijziging betrekking heeft.
+    options:
+      - label: WUS
+      - label: ebMS
+      - label: API
   - type: textarea
-    id: what-happened
+    id: omschrijving
     attributes:
       label: Omschrijving
       description: Wat is de voorgestelde wijziging? Op welke pagina of sectie staat het?
@@ -25,6 +36,16 @@ body:
       value: Schreiffaut
     validations:
       required: true
+- type: checkboxes
+  id: soort
+  attributes:
+    label: Soort wijziging
+    description: Kies één of meer opties.
+    options:
+      - label: Tekstueel
+      - description: Wijziging zonder impact op de standaard (spelfouten e.d.)
+      - label: Functioneel. 
+      - description: Wijziging met impact op de manier waarop de standaard toegepast wordt.
   - type: input
     id: contact
     attributes:
