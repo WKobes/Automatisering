@@ -1,8 +1,7 @@
 name: Wijzigingsformulier
-about: Stel een wijziging voor in de Digikoppeling standaard
+description: Stel een wijziging voor in de Digikoppeling standaard
 title: "[Wijziging]: "
 labels: ["digikoppeling", "wijziging"]
-assignees: ''
 body:
   - type: dropdown
     id: document
@@ -15,7 +14,7 @@ body:
         - Beheermodel en Releasebeleid
         - Architectuur
         - Identificatie en Authenticatie
-    validations:
+    validation:
       required: true
   - type: input
     id: contact
@@ -25,7 +24,7 @@ body:
       validations:
         required: false
   - type: input
-    id: contact
+    id: email
     attributes:
       label: Email
       description: E-mail adres 
