@@ -42,10 +42,8 @@ body:
     label: Soort wijziging
     description: Kies één of meer opties.
     options:
-      - label: Tekstueel
-      - description: Wijziging zonder impact op de standaard (spelfouten e.d.)
-      - label: Functioneel. 
-      - description: Wijziging met impact op de manier waarop de standaard toegepast wordt.
+      - label: Tekstueel: Wijziging zonder impact op de standaard (spelfouten e.d.)
+      - label: Functioneel: Wijziging met impact op de manier waarop de standaard toegepast wordt.
   - type: input
     id: contact
     attributes:
