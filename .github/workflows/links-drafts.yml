@@ -3,10 +3,10 @@ on:
   schedule:
     - cron: '0 5 * * 1'
 
-name: Check links
+name: Check links (drafts)
 jobs:
   link-checker:
-    name: Check links (drafts)
+    name: Check links
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
