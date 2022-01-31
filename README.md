@@ -14,4 +14,6 @@ In de repository van iedere [ReSpec](https://respec.org/)-publicatie is een [scr
 ### Gebroken links
 Iedere maandagochtend draait een controle op gebroken links in documenten gepubliceerd op https://publicatie.centrumvoorstandaarden.nl/.
 
-De resultaten worden gepresenteerd in [links.md](links.md).
+De resultaten worden gepresenteerd in [links-live.md](links-live.md).
+
+Voor de resultaten van de tests over de werkversies zie [links-drafts.md](links-drafts.md).

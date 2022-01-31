@@ -1,24 +1,24 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * 1'
+    - cron: '0 5 * * 1'
 
 name: Check links
 jobs:
   link-checker:
-    name: Check links (live)
+    name: Check links (drafts)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: brew install muffet
       - name: Check
-        run: muffet --json https://publicatie.centrumvoorstandaarden.nl/ > muffet.json
+        run: muffet --json https://logius-standaarden.github.io/Automatisering/data/pages > muffet.json
         continue-on-error: true
       - name: Report
         run: python ./scripts/muffet-json.py
-      - run: mv links.md links-live.md
+      - run: mv links.md links-drafts.md
       - run: rm muffet.json
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update links report (live)
+          commit_message: Update links report (drafts)
