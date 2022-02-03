@@ -1,6 +1,6 @@
 name: Aapassing op documentatie
 description: Stel een (tekstueele) wijziging voor in de documentatie van de Digikoppeling standaard
-title: "[Wijziging]: "
+title: "RFC 2022 xxxx"
 labels: ["digikoppeling", "documentatie"]
 body:
   - type: dropdown
