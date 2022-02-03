@@ -1,23 +1,8 @@
 name: Wijzigingsformulier
-description: Stel een wijziging voor in de Digikoppeling standaard
+description: Stel een (inhoudelijke) wijziging voor op de Digikoppeling standaard. Voor een tekstueele wijziging op de documentatie bestaat een ander formulier.
 title: "[Wijziging]: "
 labels: ["digikoppeling", "wijziging"]
 body:
-  - type: dropdown
-    id: document
-    attributes:
-      label: Document
-      description: Wanneer u een fout of aanpassing in een document wil voorstellen kunt u hier aangeven om welk document het gaat.
-      options:
-        - Wat is Digikoppeling?
-        - Digikoppeling Overzicht Actuele Documentatie en Compliance
-        - Beheermodel en Releasebeleid
-        - Architectuur
-        - Identificatie en Authenticatie
-        - Beveiliging standaarden en voorschriften
-        - Koppelvlakstandaard WUS
-    validations:
-      required: true
   - type: checkboxes
     id: standaard
     attributes:
@@ -31,19 +16,11 @@ body:
     id: omschrijving
     attributes:
       label: Omschrijving
-      description: Wat is de voorgestelde wijziging? Op welke pagina of sectie staat het?
-      placeholder: Beschrijving van de wijziging inclusief de plaats in het document.
-      value: Schreiffaut
+      description: Wat is de voorgestelde wijziging? 
+      placeholder: Beschrijving van de wijziging.
+      value: Vul hier de voorgestelde aanpassing in
     validations:
       required: true
-  - type: checkboxes
-    id: soort
-    attributes:
-      label: Soort wijziging
-      description: Kies één of meer opties.
-      options:
-        - label: Tekstueel, wijziging zonder impact op de standaard (spelfouten e.d.)
-        - label: Functioneel, wijziging met impact op de manier waarop de standaard toegepast wordt.
   - type: input
     id: contact
     attributes:
