@@ -1,6 +1,6 @@
 name: Wijzigingsformulier
 description: Stel een (inhoudelijke) wijziging voor op de Digikoppeling standaard. Voor een tekstueele wijziging op de documentatie bestaat een ander formulier.
-title: "[Wijziging]: "
+title: "RFC 2022 xxxx"
 labels: ["digikoppeling", "wijziging"]
 body:
   - type: checkboxes
