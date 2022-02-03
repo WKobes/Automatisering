@@ -1,0 +1,51 @@
+name: Aapassing op documentatie
+description: Stel een (tekstueele) wijziging voor in de documentatie van de Digikoppeling standaard
+title: "[Wijziging]: "
+labels: ["digikoppeling", "documentatie"]
+body:
+  - type: dropdown
+    id: document
+    attributes:
+      label: Document
+      description: Wanneer u een fout of aanpassing in een document wil voorstellen kunt u hier aangeven om welk document het gaat.
+      options:
+        - Wat is Digikoppeling?
+        - Digikoppeling Overzicht Actuele Documentatie en Compliance
+        - Beheermodel en Releasebeleid
+        - Architectuur
+        - Identificatie en Authenticatie
+        - Beveiliging standaarden en voorschriften
+        - Koppelvlakstandaard WUS
+    validations:
+      required: true
+  - type: checkboxes
+    id: standaard
+    attributes:
+      label: Soort
+      description: Om wat voor wijziging gaat het?
+      options:
+        - label: Tekstuele fout
+        - label: Onduidelijke tekst
+  - type: textarea
+    id: omschrijving
+    attributes:
+      label: Omschrijving
+      description: Wat is de voorgestelde wijziging? Op welke pagina of sectie staat het?
+      placeholder: Beschrijving van de wijziging inclusief de plaats in het document.
+      value: Schreiffaut
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Naam
+      description: Naam
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Email
+      description: E-mail adres
+    validations:
+      required: true
