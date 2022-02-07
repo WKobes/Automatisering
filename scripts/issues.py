@@ -3,9 +3,9 @@ from github import Github
 
 
 def issue_quote(issue):
-    quote = f'\n### {issue.title}\n{issue.body}\n'
+    quote = f'\n{issue.body}\n'
     quote = quote.replace('\n', '\n>')
-    return f'{quote}\n{issue.url}\n'
+    return f'\n### {issue.title}{quote}\n{issue.url}\n'
 
 
 g = Github(os.environ['SANDERKE'])
