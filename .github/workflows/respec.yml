@@ -3,22 +3,49 @@ on:
   workflow_call:
 jobs:
   main:
-    name: HTML and PDF
+    name: HTML
     runs-on: ubuntu-latest
     steps:
+      - run: mkdir ~/static
+      - name: Cache HTML
+        uses: actions/cache@v2
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
       - uses: actions/checkout@v2
-      - name: HTML
-        run: npx respec --localhost --src index.html --out snapshot.html
-      - name: PDF
+      - name: Static HTML
         run: |
-         if [[ $(git status --porcelain) ]]
-         then echo "New snapshot.html. Generating PDF"
-         else exit 0
-         fi
+          npx respec --localhost --src index.html --out ~/static/snapshot.html
+          
+  pdf:
+    needs: main
+    name: PDF
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'pull_request' && github.event_name != 'push' }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: git pull
+      - name: Recover HTML
+        uses: actions/cache@v2
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
+      - name: Cache downloads
+        id: downloads
+        uses: actions/cache@v2
+        with:
+          path: ~/pdf
+          key: wkhtmltopdf
+      - name: Download files
+        if: steps.downloads.outputs.cache-hit != 'true'
+        run: |
+          mkdir ~/pdf
+          wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb -O ~/pdf/wkhtmltopdf.deb
+      - name: Render PDF
+        run: |
+         mv ~/static/snapshot.html snapshot.html
          sudo apt-get install -y xfonts-base xfonts-75dpi
-         wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb -O wkhtmltopdf.deb
-         sudo dpkg -i wkhtmltopdf.deb
-         rm wkhtmltopdf.deb
+         sudo dpkg -i ~/pdf/wkhtmltopdf.deb
          wkhtmltopdf --enable-local-file-access snapshot.html doc.pdf       
          wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/pdf-name.py
          python pdf-name.py
@@ -26,25 +53,37 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: snapshot
+  
   wcag:
     needs: main
     name: WCAG
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git pull
+      - name: Recover HTML
+        uses: actions/cache@v2
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
+      - run: mv ~/static/snapshot.html snapshot.html
       - run: npm install -g pa11y
-      - run: pa11y ./snapshot.html
+      - run: pa11y snapshot.html
+
   links:
     needs: main
     name: Links
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git pull
+      - name: Recover HTML
+        uses: actions/cache@v2
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
+      - run: mv ~/static/snapshot.html snapshot.html
+      - name: Local server
+        run: python3 -m http.server 8080 &
       - name: Install muffet
-        run: |
-         python3 -m http.server 8080 &
-         brew install muffet
-      - name: Check links
+        run: brew install muffet      
+      - name: Check links      
         run: muffet --one-page-only http://localhost:8080/snapshot.html
