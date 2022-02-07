@@ -9,7 +9,7 @@ with open('muffet.json') as file:
     data = json.load(file)
     for page in data:
         if re.search("\.nl\/[a-z]+\/[a-z]+\/$|vv|github\.io", page['url']):
-            content += '### ' + page['url'] + '\n'
+            content += '\n### ' + page['url'] + '\n'
             for link in page['links']:                
                 try:  # Double-check
                     r = requests.get(link['url'], timeout=5)
@@ -19,9 +19,9 @@ with open('muffet.json') as file:
                 except:
                     print('Could not double-check ' + link['url'])
                 errors += 1
-                content += '* ' + link['url'] + ' `' + link['error'] + '`' + '\n\n'
+                content += '* ' + link['url'] + ' `' + link['error'] + '`' + '\n'
 
 f = open('links.md', 'w')
-f.write('## ' + str(errors) + ' broken links\n\n')
+f.write('## ' + str(errors) + ' broken links\n')
 f.write(content)
 f.close()
