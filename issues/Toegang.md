@@ -3,7 +3,7 @@
 
 ## Kleine wijzigingen
 
->### REST API documentatie in overzicht opnemen
+### REST API documentatie in overzicht opnemen
 >### Document
 >
 >Digikoppeling Overzicht Actuele Documentatie en Compliance

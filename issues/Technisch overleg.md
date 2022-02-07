@@ -1,7 +1,7 @@
 # Technisch overleg
 ## Grote wijzigingen
 
->### Digikoppeling baseren op ebMS3
+### Digikoppeling baseren op ebMS3
 >### Standaard
 >
 >- [ ] WUS
@@ -24,7 +24,7 @@ https://api.github.com/repos/Logius-standaarden/Automatisering/issues/4
 
 ## Kleine wijzigingen
 
->### REST API documentatie in overzicht opnemen
+### REST API documentatie in overzicht opnemen
 >### Document
 >
 >Digikoppeling Overzicht Actuele Documentatie en Compliance

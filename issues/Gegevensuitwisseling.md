@@ -1,7 +1,7 @@
 # Gegevensuitwisseling
 ## Grote wijzigingen
 
->### Digikoppeling baseren op ebMS3
+### Digikoppeling baseren op ebMS3
 >### Standaard
 >
 >- [ ] WUS
