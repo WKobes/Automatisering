@@ -19,7 +19,7 @@
 >### Email
 >
 >edwin.wisse@logius.nl
->
-https://api.github.com/repos/Logius-standaarden/Automatisering/issues/4
+
+Automatisering [issue #4](https://github.com/Logius-standaarden/Automatisering/issues/4)
 
 ## Kleine wijzigingen

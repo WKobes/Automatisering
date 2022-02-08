@@ -19,8 +19,8 @@
 >### Email
 >
 >edwin.wisse@logius.nl
->
-https://api.github.com/repos/Logius-standaarden/Automatisering/issues/4
+
+Automatisering [issue #4](https://github.com/Logius-standaarden/Automatisering/issues/4)
 
 ## Kleine wijzigingen
 
@@ -45,10 +45,5 @@ https://api.github.com/repos/Logius-standaarden/Automatisering/issues/4
 >### Email
 >
 >edwin.wisse@logius.nl
->
-https://api.github.com/repos/Logius-standaarden/Automatisering/issues/3
 
-### patch: reference to Koppelvlakstandaard REST-API
->Resolves Logius-standaarden/Digikoppeling-Algemeen#1 for this document.
->
-https://api.github.com/repos/Logius-standaarden/Digikoppeling-Best-Practices-WUS/issues/3
+Automatisering [issue #3](https://github.com/Logius-standaarden/Automatisering/issues/3)
