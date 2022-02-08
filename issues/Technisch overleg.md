@@ -20,8 +20,8 @@
 >
 >edwin.wisse@logius.nl
 
-Automatisering [issue #4](https://github.com/Logius-standaarden/Automatisering/issues/4)
-
+Automatisering [issue #4](https://github.com/Logius-standaarden/Automatisering/issues/4) (03 Feb 2022)
+ 
 ## Kleine wijzigingen
 
 ### REST API documentatie in overzicht opnemen
@@ -46,4 +46,5 @@ Automatisering [issue #4](https://github.com/Logius-standaarden/Automatisering/i
 >
 >edwin.wisse@logius.nl
 
-Automatisering [issue #3](https://github.com/Logius-standaarden/Automatisering/issues/3)
+Automatisering [issue #3](https://github.com/Logius-standaarden/Automatisering/issues/3) (03 Feb 2022)
+ 
