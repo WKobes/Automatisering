@@ -47,3 +47,8 @@ https://api.github.com/repos/Logius-standaarden/Automatisering/issues/4
 >edwin.wisse@logius.nl
 >
 https://api.github.com/repos/Logius-standaarden/Automatisering/issues/3
+
+### patch: reference to Koppelvlakstandaard REST-API
+>Resolves Logius-standaarden/Digikoppeling-Algemeen#1 for this document.
+>
+https://api.github.com/repos/Logius-standaarden/Digikoppeling-Best-Practices-WUS/issues/3
