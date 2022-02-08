@@ -5,7 +5,9 @@ from github import Github
 def issue_quote(issue):
     quote = f'\n{issue.body}'
     quote = quote.replace('\n', '\n>')
-    return f'\n### {issue.title}{quote}\n\n{issue.repository.name} [issue #{issue.number}]({issue.html_url})\n'
+    date = issue.created_at.strftime('%d %b %Y')
+    return f'\n### {issue.title}{quote}\n\n' \
+           f'{issue.repository.name} [issue #{issue.number}]({issue.html_url}) ({date})\n '
 
 
 g = Github(os.environ['SANDERKE'])
