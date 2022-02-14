@@ -1,3 +1,5 @@
+[BOMOS](https://logius-standaarden.github.io/BOMOS/snapshot.html)
+
 [OAuth-NL-profiel](https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html)
 
 [API-Design-Rules](https://logius-standaarden.github.io/API-Design-Rules/snapshot.html)
