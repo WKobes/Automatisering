@@ -21,5 +21,5 @@
 >edwin.wisse@logius.nl
 
 Automatisering [issue #4](https://github.com/Logius-standaarden/Automatisering/issues/4) (03 Feb 2022)
- 
+
 ## Kleine wijzigingen
