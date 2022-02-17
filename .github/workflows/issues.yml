@@ -12,10 +12,14 @@ jobs:
       - uses: actions/checkout@v2
       - run: pip install --upgrade PyGitHub
       - run: mkdir -p issues
-      - name: Report
+      - name: Issues
         env:
           SANDERKE: ${{ secrets.SANDERKE }}
         run: python ./scripts/issues.py
+      - name: RFCs
+        env:
+          SANDERKE: ${{ secrets.SANDERKE }}
+        run: python ./scripts/rfc.py
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

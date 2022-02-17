@@ -2,6 +2,10 @@
 
 In deze repository worden scripts bijgehouden om het publicatie- en controleproces van documenten te automatiseren.
 
+## Wijzigingsvoorstellen
+
+Een overzicht van de openstaande wijzigingsvoorstellen wordt dagelijks bijgewerkt in [dit bestand](issues/rfc.md).
+
 ## Automatische tests
 
 ### Publicatie
