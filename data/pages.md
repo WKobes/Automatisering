@@ -1,4 +1,8 @@
-[BOMOS](https://logius-standaarden.github.io/BOMOS/snapshot.html)
+[BOMOS Fundament](https://logius-standaarden.github.io/BOMOS-Fundament/snapshot.html)
+
+[BOMOS Verdieping](https://logius-standaarden.github.io/BOMOS-Verdieping/snapshot.html)
+
+[BOMOS Aanvullende modules](https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html)
 
 [OAuth-NL-profiel](https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html)
 
