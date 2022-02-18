@@ -24,13 +24,20 @@ body:
     id: contact
     attributes:
       label: Naam
-      description: Naam
+      description: Naam. Uw naam wordt online getoond in het issue. U kunt ook anoniem invullem.
     validations:
-      required: true
+      required: false
   - type: input
     id: email
     attributes:
       label: Email
-      description: E-mail adres
+      description: E-mail adres. Uw e-mail adres wordt online getoond in het issue. U kunt ook anoniem invullem.
+    validations:
+      required: false
+  - type: input
+    id: organisatie
+    attributes:
+      label: Organisatie
+      description: Naam van uw organisatie. Dit veld is verplicht omdat we deze in het overzicht opnemen.
     validations:
       required: true
