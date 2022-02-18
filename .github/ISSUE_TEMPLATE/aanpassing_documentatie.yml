@@ -18,7 +18,7 @@ body:
       label: Omschrijving
       description: Wat is de voorgestelde wijziging? Op welke pagina of sectie staat het?
       placeholder: Beschrijving van de wijziging inclusief de plaats in het document.
-      value: Schreiffaut
+      value: Vul hier uw voorgestelde wijziging in.
     validations:
       required: true
   - type: input
