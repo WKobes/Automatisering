@@ -10,6 +10,7 @@ body:
       description: Om wat voor wijziging gaat het?
       options:
         - label: Tekstuele fout
+        - label: Verbetersuggestie
         - label: Onduidelijke tekst
   - type: textarea
     id: omschrijving
