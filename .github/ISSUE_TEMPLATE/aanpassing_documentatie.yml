@@ -3,21 +3,6 @@ description: Stel een (tekstueele) wijziging voor in de documentatie van de Digi
 title: "RFC 2022 xxxx"
 labels: ["digikoppeling", "documentatie"]
 body:
-  - type: dropdown
-    id: document
-    attributes:
-      label: Document
-      description: Wanneer u een fout of aanpassing in een document wil voorstellen kunt u hier aangeven om welk document het gaat.
-      options:
-        - Wat is Digikoppeling?
-        - Digikoppeling Overzicht Actuele Documentatie en Compliance
-        - Beheermodel en Releasebeleid
-        - Architectuur
-        - Identificatie en Authenticatie
-        - Beveiliging standaarden en voorschriften
-        - Koppelvlakstandaard WUS
-    validations:
-      required: true
   - type: checkboxes
     id: standaard
     attributes:
