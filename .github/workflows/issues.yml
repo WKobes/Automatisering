@@ -6,7 +6,7 @@ on:
 name: Check issues
 jobs:
   link-checker:
-    name: Check links
+    name: Check issues
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
