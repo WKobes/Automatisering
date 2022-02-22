@@ -17,6 +17,38 @@ jobs:
         run: |
           npx respec --localhost --src index.html --out ~/static/snapshot.html
           
+  preview:
+    needs: main
+    name: Preview
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'TODO'}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Recover HTML
+        uses: actions/cache@v2
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
+      - name: Gather files
+        run: |
+         rm index.html
+         mv ~/static/snapshot.html index.html
+         mkdir ~/content
+         mv ./* ~/content
+         mkdir ~/destination
+         cd ~/destination
+         git clone https://user:${{ secrets.SANDERKE }}@github.com/sanderke/testB.git
+      - name: Commit preview
+        run: |
+         cd ~/destination/testB
+         mkdir -p ${{ github.event.repository.name }}/${GITHUB_REF##*/}
+         mv ~/content/* ${{ github.event.repository.name }}/${GITHUB_REF##*/}
+         git add -A
+         git config user.name "GitHub Action"
+         git config user.email "api@logius.nl"
+         git commit -m "new preview build"
+         git push
+          
   pdf:
     needs: main
     name: PDF
