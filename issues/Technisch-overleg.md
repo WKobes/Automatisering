@@ -24,6 +24,12 @@ Automatisering [issue #4](https://github.com/Logius-standaarden/Automatisering/i
 
 ## Kleine wijzigingen
 
+### Correctie samenvatting
+>(Tekst correctie)
+>Samenvatting moet aangepast worden naar onderwerp identificatie & authenticatie
+
+Digikoppeling-Identificatie-en-Authenticatie [issue #4](https://github.com/Logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie/issues/4) (21 Feb. 2022)
+
 ### REST API documentatie in overzicht opnemen
 >### Document
 >
