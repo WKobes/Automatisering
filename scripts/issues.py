@@ -13,8 +13,8 @@ def issue_quote(issue):
 g = Github(os.environ['SANDERKE'])
 org = g.get_organization('Logius-standaarden')
 labels = org.get_repo('Automatisering').get_labels()
-klein = org.get_repo('Automatisering').get_label('Scope: klein')
-groot = org.get_repo('Automatisering').get_label('Scope: groot')
+klein = org.get_repo('Automatisering').get_label('Scope: Klein')
+groot = org.get_repo('Automatisering').get_label('Scope: Groot')
 
 for label in labels:
     if not label.name.startswith('Overleg: '):

@@ -1,0 +1,35 @@
+name: Check
+on:
+  workflow_call:
+jobs:  
+  wcag:
+    name: WCAG
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Recover HTML
+        uses: actions/cache@v2
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
+      - run: mv ~/static/snapshot.html snapshot.html
+      - run: npm install -g pa11y
+      - run: pa11y snapshot.html
+
+  links:
+    name: Links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Recover HTML
+        uses: actions/cache@v2
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
+      - run: mv ~/static/snapshot.html snapshot.html
+      - name: Local server
+        run: python3 -m http.server 8080 &
+      - name: Install muffet
+        run: brew install muffet      
+      - name: Check links      
+        run: muffet --one-page-only http://localhost:8080/snapshot.html
