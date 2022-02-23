@@ -10,7 +10,7 @@
 >
 >### Omschrijving
 >
->Gooi ebMS3 eruit en vervang dit door ebM3/AS4
+>Digikoppeling maakt gebruik van ebMS2. Deze standaard is verouderd en wordt niet meer verder ontwikkeld. De vervangende standaard ebMS3 is vereenvoudigd en wordt ook in de Europese eDelivery standaard toegepast.
 >
 >### Naam
 >
