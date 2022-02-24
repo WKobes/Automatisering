@@ -2,7 +2,7 @@ import os
 from github import Github
 import requests
 
-g = Github(os.environ['SANDERKE'])
+g = Github(os.environ['BEHEER'])
 
 org = g.get_organization('Logius-standaarden')
 repos = org.get_repos()

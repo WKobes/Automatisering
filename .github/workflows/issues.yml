@@ -14,15 +14,15 @@ jobs:
       - run: mkdir -p issues
       - name: Labels
         env:
-          SANDERKE: ${{ secrets.SANDERKE }}
+          BEHEER: ${{ secrets.BEHEER }}
         run: python ./scripts/labels.py
       - name: Issues
         env:
-          SANDERKE: ${{ secrets.SANDERKE }}
+          BEHEER: ${{ secrets.BEHEER }}
         run: python ./scripts/issues.py
       - name: RFCs
         env:
-          SANDERKE: ${{ secrets.SANDERKE }}
+          BEHEER: ${{ secrets.BEHEER }}
         run: python ./scripts/rfc.py
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
