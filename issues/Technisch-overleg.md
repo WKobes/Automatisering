@@ -1,67 +1,9 @@
 # Technisch overleg
 ## Grote wijzigingen
-
-### Digikoppeling baseren op ebMS3
->### Standaard
->
->- [ ] WUS
->- [X] ebMS
->- [ ] API
->
->### Omschrijving
->
->Digikoppeling maakt gebruik van ebMS2. Deze standaard is verouderd en wordt niet meer verder ontwikkeld. De vervangende standaard ebMS3 is vereenvoudigd en wordt ook in de Europese eDelivery standaard toegepast.
->
->### Naam
->
->Edwin Wisse
->
->### Email
->
->edwin.wisse@logius.nl
-
-Automatisering [issue #4](https://github.com/Logius-standaarden/Automatisering/issues/4) (03 Feb. 2022)
+* Digikoppeling-Koppelvlakstandaard-ebMS2 [issue #6] [Digikoppeling baseren op ebMS3](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2/issues/6) (03 Feb. 2022)
 
 ## Kleine wijzigingen
-
-### Correctie samenvatting
->(Tekst correctie)
->Samenvatting moet aangepast worden naar onderwerp identificatie & authenticatie
-
-Digikoppeling-Identificatie-en-Authenticatie [issue #4](https://github.com/Logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie/issues/4) (21 Feb. 2022)
-
-### REST API documentatie in overzicht opnemen
->### Document
->
->Digikoppeling Overzicht Actuele Documentatie en Compliance
->
->### Soort
->
->- [ ] Tekstuele fout
->- [X] Onduidelijke tekst
->
->### Omschrijving
->
->Het document verwijst nog niet naar de Digikoppeling REST API standaard.
->
->### Naam
->
->Edwin Wisse
->
->### Email
->
->edwin.wisse@logius.nl
-
-Automatisering [issue #3](https://github.com/Logius-standaarden/Automatisering/issues/3) (03 Feb. 2022)
-
-### Toevoegen Rest API profiel
->Aanpassen documentatie nav het toevoegen van het rest api koppelvlak aan de standaard;
->
->Dwz voor teksten waar nu verwezen wordt naar WUS/EBMS koppelvlakken zal de tekst of algemener moeten worden gemaakt of het REST API koppelvlak zal moeten worden toegevoegd , bv bij opsommingen.
-
-Digikoppeling-Algemeen [issue #1](https://github.com/Logius-standaarden/Digikoppeling-Algemeen/issues/1) (01 Feb. 2022)
-
-### Aanpassen Bijlage OIN Tabel
->Aanpassen Bijlage OIN Tabel conform OIN Beleid
-
-Digikoppeling-Algemeen [issue #2](https://github.com/Logius-standaarden/Digikoppeling-Algemeen/issues/2) (26 Jan. 2022)
+* Digikoppeling-Identificatie-en-Authenticatie [issue #4] [Correctie samenvatting](https://github.com/Logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie/issues/4) (21 Feb. 2022)
+* Automatisering [issue #3] [REST API documentatie in overzicht opnemen](https://github.com/Logius-standaarden/Automatisering/issues/3) (03 Feb. 2022)
+* Digikoppeling-Algemeen [issue #1] [Toevoegen Rest API profiel](https://github.com/Logius-standaarden/Digikoppeling-Algemeen/issues/1) (01 Feb. 2022)
+* Digikoppeling-Algemeen [issue #2] [Aanpassen Bijlage OIN Tabel](https://github.com/Logius-standaarden/Digikoppeling-Algemeen/issues/2) (26 Jan. 2022)
