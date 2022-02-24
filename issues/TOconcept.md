@@ -1,9 +1,10 @@
 # Technisch overleg
-Referentie naar eerstvolgende mijlpaal
+
+_Import van een tekst uit een MD file in de Automatisering repo_ "Agenda voor het Technische overleg van 23 maart" bijvoorbeeld. 
 
 ## Grote wijzigingen
 
-– Automatisering [issue #4] [Digikoppeling baseren op ebMS3](https://github.com/Logius-standaarden/Automatisering/issues/4) (03 Feb. 2022)
+â€“ Automatisering [issue #4] [Digikoppeling baseren op ebMS3](https://github.com/Logius-standaarden/Automatisering/issues/4) (03 Feb. 2022)
 
 ## Kleine wijzigingen
 
