@@ -1,44 +1,56 @@
-name: Build and Check
+name: Build
 on:
-  workflow_dispatch:
-  pull_request:
+  workflow_call:
 jobs:
-  build:
-    name: Build
-    uses: Logius-standaarden/Automatisering/.github/workflows/build.yml@main
-  check:
-    needs: build
-    name: Check
-    uses: Logius-standaarden/Automatisering/.github/workflows/check.yml@main
-    
-  preview:
-    needs: build
-    name: Preview
+  main:
+    name: HTML
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork }}
+    steps:
+      - run: mkdir ~/static
+      - name: Cache HTML
+        uses: actions/cache@v2
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
+      - uses: actions/checkout@v2
+      - name: Static HTML
+        run: |
+          npx respec --localhost --src index.html --out ~/static/snapshot.html
+
+  pdf:
+    needs: main
+    name: PDF
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'pull_request' && github.event_name != 'push' }}
     steps:
       - uses: actions/checkout@v2
+      - run: git pull
       - name: Recover HTML
         uses: actions/cache@v2
         with:
           path: ~/static
-          key: ${{ github.run_id }}      
-      - name: Gather files
+          key: ${{ github.run_id }}
+      - name: Cache downloads
+        id: downloads
+        uses: actions/cache@v2
+        with:
+          path: ~/pdf
+          key: wkhtmltopdf
+      - name: Download files
+        if: steps.downloads.outputs.cache-hit != 'true'
         run: |
-         rm index.html
-         mv ~/static/snapshot.html index.html
-         rm -f *.md *.pdf *.js snapshot.html
-         mkdir ~/content
-         mv ./* ~/content
-         git clone https://user:${{ secrets.BEHEER }}@github.com/Logius-standaarden/Publicatie-Preview.git
-      - name: Commit preview
+          mkdir ~/pdf
+          wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb -O ~/pdf/wkhtmltopdf.deb
+      - name: Render PDF
         run: |
-         cd Publicatie-Preview
-         rm -f -r ${{ github.event.repository.name }}/${{ github.head_ref }}
-         mkdir -p ${{ github.event.repository.name }}/${{ github.head_ref }}
-         mv ~/content/* ${{ github.event.repository.name }}/${{ github.head_ref }}
-         git add -A
-         git config user.name "GitHub Action"
-         git config user.email "api@logius.nl"
-         git commit -m "new preview build"
-         git push
+         mv ~/static/snapshot.html snapshot.html
+         sudo apt-get install -y xfonts-base xfonts-75dpi
+         sudo dpkg -i ~/pdf/wkhtmltopdf.deb
+         wkhtmltopdf --enable-local-file-access snapshot.html doc.pdf       
+         wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/pdf-name.py
+         python pdf-name.py
+         rm pdf-name.py
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: snapshot
+  
