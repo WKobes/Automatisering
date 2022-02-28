@@ -1,4 +1,7 @@
-## 44 broken links
+## 45 broken links
+
+### https://logius-standaarden.github.io/Automatisering/
+* https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
 
 ### https://logius-standaarden.github.io/BOMOS-Fundament/
 * https://github.com/centrumvoorstandaarden/respec/wiki/specStatus `404`
@@ -12,24 +15,24 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 ### https://logius-standaarden.github.io/Digikoppeling-Best-Practices-GB/snapshot.html
 * http://www.stelselhandboek.nl `lookup www.stelselhandboek.nl: no such host`
 
-### https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/beleggen_ontwikkeltaken.png `404`
-* https://logius-standaarden.github.io/BOMOS-Fundament/images/bomos_activiteiten.png `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/opbrengstenmodel.png `404`
-* https://logius-standaarden.github.io/BOMOS/ `404`
-* https://logius-standaarden.github.io/media/nenactiviteiten3.png `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/adoptiekeuzes.png `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/kwaliteitsinstrumenten.png `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/gelaagdheid_van_standaarden.png `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/organisatiestructuur.png `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/medmij_afsprakenstelsel.png `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/levensfases_standaard.png `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/xkcd_standards.png `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/bomos_activiteiten.png `404`
-* https://github.com/Logius-standaarden/BOMOS/issues/ `404`
+### https://logius-standaarden.github.io/BOMOS-Verdieping/snapshot.html
 * https://logius-standaarden.github.io/media/nenactiviteiten2.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/adoptiekeuzes.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/medmij_afsprakenstelsel.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/levensfases_standaard.png `404`
+* https://logius-standaarden.github.io/media/nenactiviteiten3.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/adoptiepaden_standaard.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/beleggen_ontwikkeltaken.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/organisatiestructuur.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/xkcd_standards.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/opbrengstenmodel.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/kwaliteitsinstrumenten.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/gelaagdheid_van_standaarden.png `404`
+* https://logius-standaarden.github.io/BOMOS/ `404`
+* https://logius-standaarden.github.io/BOMOS-Fundament/images/bomos_activiteiten.png `404`
+* https://logius-standaarden.github.io/BOMOS-Verdieping/images/bomos_activiteiten.png `404`
+* https://github.com/Logius-standaarden/BOMOS/issues/ `404`
 * https://github.com/Logius-standaarden/BOMOS/pulls/ `404`
-* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/adoptiepaden_standaard.png `404`
 * https://github.com/Logius-standaarden/BOMOS/ `404`
 * https://github.com/Logius-standaarden/BOMOS/commits/ `404`
 _Passed retest: https://setu.semantic-treehouse.nl/#/ext/eValidator_
@@ -41,25 +44,25 @@ _Passed retest: https://ec.europa.eu/isa2/isa2conf18/VocBench-3_en_
 
 * http://www.rosettanet.org `dialing to the given TCP address timed out`
 
-### https://logius-standaarden.github.io/BOMOS-Verdieping/snapshot.html
+### https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html
+* https://logius-standaarden.github.io/media/nenactiviteiten2.png `404`
+* https://logius-standaarden.github.io/media/nenactiviteiten3.png `404`
 * https://logius-standaarden.github.io/BOMOS/ `404`
 * https://logius-standaarden.github.io/BOMOS-Fundament/images/bomos_activiteiten.png `404`
-* https://logius-standaarden.github.io/media/nenactiviteiten3.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/beleggen_ontwikkeltaken.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/gelaagdheid_van_standaarden.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/kwaliteitsinstrumenten.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/medmij_afsprakenstelsel.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/levensfases_standaard.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/opbrengstenmodel.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/adoptiekeuzes.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/adoptiepaden_standaard.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/organisatiestructuur.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/bomos_activiteiten.png `404`
 * https://github.com/Logius-standaarden/BOMOS/issues/ `404`
-* https://logius-standaarden.github.io/media/nenactiviteiten2.png `404`
 * https://github.com/Logius-standaarden/BOMOS/pulls/ `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/organisatiestructuur.png `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/beleggen_ontwikkeltaken.png `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/xkcd_standards.png `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/medmij_afsprakenstelsel.png `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/gelaagdheid_van_standaarden.png `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/adoptiepaden_standaard.png `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/kwaliteitsinstrumenten.png `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/opbrengstenmodel.png `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/bomos_activiteiten.png `404`
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/images/xkcd_standards.png `404`
 * https://github.com/Logius-standaarden/BOMOS/ `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/levensfases_standaard.png `404`
-* https://logius-standaarden.github.io/BOMOS-Verdieping/images/adoptiekeuzes.png `404`
 * https://github.com/Logius-standaarden/BOMOS/commits/ `404`
 _Passed retest: https://setu.semantic-treehouse.nl/#/ext/eValidator_
 
