@@ -53,7 +53,6 @@ for label in labels:
     if name == 'Technisch overleg':
         results = intro_format('Digikoppeling-Technisch-Overleg')
         content += results[2]
-        upload = True
     issues = org.get_issues(filter='all', labels=[label, groot])
     content += '\n## Grote wijzigingen\n'
     for issue in issues:
@@ -72,7 +71,7 @@ for label in labels:
         path = results[1] + '/README.MD'
         text = content
         message = 'Updating notes'
-        print(f'Editing {path} in {repo}')
+        print(f'Editing {path} in {repo.name}')
         try:
             file = repo.get_contents(path=path)
             sha = file.sha
