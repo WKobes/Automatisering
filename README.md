@@ -4,7 +4,7 @@ In deze repository worden scripts bijgehouden om het publicatie- en controleproc
 
 ## Wijzigingsvoorstellen
 
-Een overzicht van de openstaande wijzigingsvoorstellen wordt dagelijks bijgewerkt in [dit bestand](issues/rfc.md).
+Een overzicht van de openstaande wijzigingsvoorstellen wordt dagelijks bijgewerkt in [Logius-standaarden/Overleg](https://github.com/Logius-standaarden/Overleg).
 
 ## Automatische tests
 

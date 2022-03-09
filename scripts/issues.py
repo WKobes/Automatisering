@@ -3,29 +3,21 @@ from github import Github
 import requests
 
 
-# TODO: Clean-up
-def intro_format(repo_name):
-    print('Looking for intro in ' + repo_name)
-    repo = org.get_repo(repo_name)
-    contents = repo.get_contents(path='')
-    path = ''
+def intro_format(name):
+    print('Looking for intro in ' + name)
+    path = name
     intro = ''
-    for entry in contents:
-        if entry.name[0] == '2' and entry.type == 'dir':  # Year
-            path = entry.path
-    if len(path) > 0:
+    try:
         contents = repo.get_contents(path=path)
-        path = ''
         for entry in contents:
-            if entry.name[0] == '2' and entry.type == 'dir':  # Date
+            if entry.name[0] == '2' and entry.type == 'dir':
                 path = entry.path
-        if len(path) > 0:
-            contents = repo.get_contents(path=path)
-            for entry in contents:
-                if entry.name == 'INTRO.MD':  # Intro
-                    intro = '\n\n' + requests.get(entry.download_url).text
-                    print(intro)
-    return [repo, path, intro]
+        contents = repo.get_contents(path=path)
+        for entry in contents:
+            if entry.name == 'intro.md':
+                intro = '\n\n' + requests.get(entry.download_url).text
+    finally:
+        return [path, intro]
 
 
 def issue_format(issue):
@@ -39,20 +31,25 @@ def issue_format(issue):
 
 g = Github(os.environ['BEHEER'])
 org = g.get_organization('Logius-standaarden')
-labels = org.get_repo('Automatisering').get_labels()
-klein = org.get_repo('Automatisering').get_label('Scope: Klein')
-groot = org.get_repo('Automatisering').get_label('Scope: Groot')
+base = org.get_repo('Automatisering')
+labels = base.get_labels()
+klein = base.get_label('Scope: Klein')
+groot = base.get_label('Scope: Groot')
+repo = org.get_repo('Overleg')
 
 for label in labels:
     if not label.name.startswith('Overleg: '):
         continue
     name = label.name[label.name.find(': ') + 2:]
-    print(name)
+    print(f'~ {name} ~')
     content = f'# {name}'
     results = []
     if name == 'Technisch overleg':
-        results = intro_format('Digikoppeling-Technisch-Overleg')
-        content += results[2]
+        results = intro_format('Digikoppeling')
+    else:
+        results = intro_format('Programmeringstafels/' + name)
+    fn = f'{results[0]}/README.md'
+    content += results[1]
     issues = org.get_issues(filter='all', labels=[label, groot])
     content += '\n## Grote wijzigingen\n'
     for issue in issues:
@@ -61,24 +58,9 @@ for label in labels:
     content += '\n## Kleine wijzigingen\n'
     for issue in issues:
         content += issue_format(issue)
-    fn = name.replace(' ', '-')
-    f = open(f'issues/{fn}.md', 'w')
+    fn = fn.replace(' ', '-')
+    os.makedirs(os.path.dirname(fn), exist_ok=True)
+    f = open(fn, 'w')
+    print('Writing to ' + fn)
     f.write(content)
     f.close()
-
-    if len(results) > 0:
-        repo = results[0]
-        path = results[1] + '/README.MD'
-        text = content
-        message = 'Updating notes'
-        print(f'Editing {path} in {repo.name}')
-        try:
-            file = repo.get_contents(path=path)
-            sha = file.sha
-        except:
-            repo.create_file(path=path, message=message, content=text)
-        else:
-            if requests.get(file.download_url).text == text:
-                print('No update')
-            else:
-                repo.update_file(path=path, message=message, content=text, sha=sha)

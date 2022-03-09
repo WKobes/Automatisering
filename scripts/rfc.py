@@ -23,7 +23,7 @@ for repo in repos:
             content = f'{content}\n### {repo.name}\n[Pull request]({pr.html_url})\n{details}\n'
             rfcs.update({number: content})
 
-f = open('issues/rfc.md', 'w')
+f = open('Digikoppeling/rfc.md', 'w')
 keys = rfcs.keys()
 for key in keys:
     rfc = g.get_repo(issue_base).get_issue(key)
