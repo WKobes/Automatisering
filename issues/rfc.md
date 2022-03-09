@@ -62,21 +62,21 @@ index 05c0dc4..a386c25 100644
 
 ```diff
 diff --git a/ch01_Inleiding.md b/ch01_Inleiding.md
-index db2677a..80fc02d 100644
+index db2677a..59c201b 100644
 --- a/ch01_Inleiding.md
 +++ b/ch01_Inleiding.md
-@@ -56,6 +56,11 @@ opgebouwd:
- 									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpebms">Best-practice ebMS2</a></i>† </li>
- 								</ul>
- 							</li>
-+							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi/">DK Koppelvlakstandaard REST API</a>*
+@@ -46,6 +46,11 @@ opgebouwd:
+ 					<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/">DK Beveiligingsstandaarden en voorschriften</a>* </li>
+ 					<li>Koppelvlakstandaarden
+ 						<ul>
++							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi/">DK Koppelvlakstandaard REST-API</a>*
 +								<ul>
-+									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi">Best-practice REST API</a></i>†</li>
++									<li><i>Best-practice REST-API</i>† </li>
 +								</ul>
 +							</li>
- 							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/gb/">DK Koppelvlakstandaard Grote Berichten</a>*
+ 							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/wus/">DK Koppelvlakstandaard WUS</a>*
  								<ul>
- 									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpgb">Best-practice Grote Berichten</a></i>†</li>
+ 									<li><i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpwus">Best-practice WUS</a></i>† </li>
 @@ -117,6 +122,18 @@ Digikoppeling maakt berichtenuitwisseling mogelijk op basis van de ebXML/ebMS2
  en WUS families van standaarden inclusief de daarbij behorende verwante
  standaarden.
@@ -240,21 +240,21 @@ index 05c0dc4..a386c25 100644
 
 ```diff
 diff --git a/ch01_Inleiding.md b/ch01_Inleiding.md
-index d4ced9b..54b2841 100644
+index d4ced9b..9253ec0 100644
 --- a/ch01_Inleiding.md
 +++ b/ch01_Inleiding.md
-@@ -52,6 +52,11 @@ Digikoppeling is beschreven in een set van documenten. Deze set is als volgt opg
- 									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpgb">Best-practice Grote Berichten</a></i>†</li>
- 								</ul>
- 							</li>
-+							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi/">DK Koppelvlakstandaard REST API</a>*
+@@ -37,6 +37,11 @@ Digikoppeling is beschreven in een set van documenten. Deze set is als volgt opg
+ 					<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/">DK Beveiligingsstandaarden en voorschriften</a>* </li>
+ 					<li>Koppelvlakstandaarden
+ 						<ul>
++							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi/">DK Koppelvlakstandaard REST-API</a>*
 +								<ul>
-+									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi">Best-practice REST API</a></i>†</li>
++									<li><i>Best-practice REST-API</i>† </li>
 +								</ul>
 +							</li>
- 						</ul>
- 					</li>
- 				</ul>
+ 							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/wus/">DK Koppelvlakstandaard WUS</a>*
+ 								<ul>
+ 									<li><i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpwus">Best-practice WUS</a></i>† </li>
 diff --git a/ch03_CPA Gebruik en Kenmerken.md b/ch03_CPA Gebruik en Kenmerken.md
 index 65acd53..8b543bc 100644
 --- a/ch03_CPA Gebruik en Kenmerken.md	
@@ -291,21 +291,21 @@ index 05c0dc4..a386c25 100644
 
 ```diff
 diff --git a/ch01_Inleiding.md b/ch01_Inleiding.md
-index 6f11c5e..74de3b3 100644
+index 6f11c5e..dbd1b41 100644
 --- a/ch01_Inleiding.md
 +++ b/ch01_Inleiding.md
-@@ -49,6 +49,11 @@ Dit document is een onderdeel van de Digikoppeling standaard.
- 									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpebms">Best-practice ebMS2</a></i>† </li>
- 								</ul>
- 							</li>
-+							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi/">DK Koppelvlakstandaard REST API</a>*
+@@ -39,6 +39,11 @@ Dit document is een onderdeel van de Digikoppeling standaard.
+ 					<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/">DK Beveiligingsstandaarden en voorschriften</a>* </li>
+ 					<li>Koppelvlakstandaarden
+ 						<ul>
++							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi/">DK Koppelvlakstandaard REST-API</a>*
 +								<ul>
-+									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi">Best-practice REST API</a></i>†</li>
++									<li><i>Best-practice REST-API</i>† </li>
 +								</ul>
 +							</li>
- 							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/gb/">DK Koppelvlakstandaard Grote Berichten</a>*
+ 							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/wus/">DK Koppelvlakstandaard WUS</a>*
  								<ul>
- 									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpgb">Best-practice Grote Berichten</a></i>†</li>
+ 									<li><i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpwus">Best-practice WUS</a></i>† </li>
 diff --git a/ch02_Achtergrond PKIoverheid certificaten.md b/ch02_Achtergrond PKIoverheid certificaten.md
 index 8e54372..e1e7845 100644
 --- a/ch02_Achtergrond PKIoverheid certificaten.md	
