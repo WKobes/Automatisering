@@ -20,13 +20,15 @@ for repo in repos:
                 content = rfcs.get(number)
             r = requests.get(pr.diff_url, timeout=5)
             details = f'<details><summary>Wijzigingen</summary>\n\n```diff\n{r.text}\n```\n\n</details>'
-            content = f'{content}\n### {repo.name}\n[Pull request]({pr.html_url})\n{details}\n'
+            preview = f'[Preview](https://logius-standaarden.github.io/Publicatie-Preview/{repo.name}/{pr.head.ref})'
+            content = f'{content}\n#### {repo.name}\n[Pull request]({pr.html_url}) | {preview}\n{details}\n'
             rfcs.update({number: content})
 
 f = open('Digikoppeling/rfc.md', 'w')
+f.write('# RFC-lijst')
 keys = rfcs.keys()
 for key in keys:
     rfc = g.get_repo(issue_base).get_issue(key)
-    content = f'\n# {rfc.title}\n{rfc.body}\n## Aangepaste documenten\n{rfcs.get(key)}'
+    content = f'\n## RFC: {rfc.title}\n{rfc.body}\n### Aangepaste documenten\n{rfcs.get(key)}'
     f.write(content)
 f.close()
