@@ -14,13 +14,10 @@ for repo in repos:
     for label in labels:
         found = False
         for repo_label in repo_labels:
-            if repo_label.name == label.name:
-                found = True
-                break
-            elif repo_label.name.upper() == label.name.upper():
-                old_name = repo_label.name
-                repo_label.edit(name=label.name, color=label.color, description=label.description)
-                print(f'Renamed label \'{old_name}\' to \'{label.name}\'')
+            if repo_label.name.upper() == label.name.upper():
+                if repo_label.name != label.name | repo_label.description != label.description:
+                    repo_label.edit(name=label.name, color=label.color, description=label.description)
+                    print(f'Edited label \'{label.name}\' with description \'{label.description}\'')
                 found = True
                 break
         if not found:

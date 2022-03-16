@@ -7,6 +7,7 @@ def intro_format(name):
     print('Looking for intro in ' + name)
     path = name
     intro = ''
+    agenda = ''
     try:
         contents = repo.get_contents(path=path)
         for entry in contents:
@@ -14,10 +15,12 @@ def intro_format(name):
                 path = entry.path
         contents = repo.get_contents(path=path)
         for entry in contents:
-            if entry.name == 'intro.md':
+            if entry.name.upper() == 'INTRO.MD':
                 intro = '\n\n' + requests.get(entry.download_url).text
+            elif entry.name.upper() == 'AGENDA.MD':
+                agenda = '\n\n' + requests.get(entry.download_url).text
     finally:
-        return [path, intro]
+        return [path, agenda, intro]
 
 
 def issue_format(issue):
@@ -49,8 +52,9 @@ for label in labels:
     else:
         results = intro_format('Programmeringstafels/' + name)
     fn = f'{results[0]}/README.md'
-    content += results[1]
+    content += results[1]  # Agenda
     issues = org.get_issues(filter='all', labels=[label, groot])
+    content += '\n# Wijzigingen\n'
     content += '\n## Grote wijzigingen\n'
     for issue in issues:
         content += issue_format(issue)
@@ -58,6 +62,8 @@ for label in labels:
     content += '\n## Kleine wijzigingen\n'
     for issue in issues:
         content += issue_format(issue)
+    content += '\n# Toelichting\n'
+    content += results[2]  # Intro
     fn = fn.replace(' ', '-')
     os.makedirs(os.path.dirname(fn), exist_ok=True)
     f = open(fn, 'w')
