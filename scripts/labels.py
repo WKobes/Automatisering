@@ -15,7 +15,7 @@ for repo in repos:
         found = False
         for repo_label in repo_labels:
             if repo_label.name.upper() == label.name.upper():
-                if repo_label.name != label.name | repo_label.description != label.description:
+                if (repo_label.name != label.name) or (repo_label.description != label.description):
                     repo_label.edit(name=label.name, color=label.color, description=label.description)
                     print(f'Edited label \'{label.name}\' with description \'{label.description}\'')
                 found = True
