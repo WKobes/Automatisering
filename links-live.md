@@ -1,4 +1,4 @@
-## 44 broken links
+## 45 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://publicatie.centrumvoorstandaarden.nl/api/adr/API-Design-Rules.pdf `404`
@@ -40,6 +40,7 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 * https://my.host.nl:8443/f47ac10b-58cc-4372-a567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/bpwus/
+* http://wus.osb.gbo.overheid.nl/wsdl/compliance-v1%E2%80%9D `404 (following redirect https://www.overheid.nl/404/)`
 * http://www.w3.org/TR/wsdlhttps://www.w3.org/TR/wsdl/#notation `404`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/ebms/
@@ -74,6 +75,8 @@ _Passed retest: https://logius-standaarden.github.io/API-Design-Rules/#api-51_
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/watisdk/
 * http://e-overheid.nl/images/stories/Publicaties/rapport_%20kba_def.pdf `404 (following redirect https://www.e-overheid.nl/images/stories/Publicaties/rapport_%20kba_def.pdf)`
+_Passed retest: http://ec.europa.eu/idabc/en/document/2319/5644.html_
+
 * http://www.logius.nl/producten/gegevensuitwisseling/digilevering/ `404 (following redirect https://logius.nl/producten/gegevensuitwisseling/digilevering/)`
 * http://www.logius.nl/producten/gegevensuitwisseling/digimelding/ `404 (following redirect https://logius.nl/producten/gegevensuitwisseling/digimelding/)`
 * http://www.logius.nl/producten/gegevensuitwisseling/stelselcatalogus/ `404 (following redirect https://logius.nl/producten/gegevensuitwisseling/stelselcatalogus/)`
