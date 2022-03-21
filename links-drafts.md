@@ -1,4 +1,4 @@
-## 36 broken links
+## 39 broken links
 
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
@@ -7,6 +7,7 @@
 * https://github.com/centrumvoorstandaarden/respec/wiki/specStatus `404`
 
 ### https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html
+* http://validatie.geostandaarden.nl/ `x509: certificate has expired or is not yet valid: current time 2022-03-21T05:09:52Z is after 2022-03-20T23:59:59Z (following redirect https://validatie.geostandaarden.nl/)`
 * http://www.rosettanet.org `dialing to the given TCP address timed out`
 _Passed retest: https://ec.europa.eu/isa2/eif_en_
 
@@ -61,6 +62,7 @@ _Passed retest: https://logius-standaarden.github.io/BOMOS-Verdieping/index.html
 
 
 ### https://logius-standaarden.github.io/BOMOS-Verdieping/snapshot.html
+* http://validatie.geostandaarden.nl/ `x509: certificate has expired or is not yet valid: current time 2022-03-21T05:09:52Z is after 2022-03-20T23:59:59Z (following redirect https://validatie.geostandaarden.nl/)`
 * http://www.rosettanet.org `dialing to the given TCP address timed out`
 _Passed retest: https://ec.europa.eu/isa2/eif_en_
 
@@ -90,11 +92,8 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 ### https://logius-standaarden.github.io/Digikoppeling-Best-Practices-GB/snapshot.html
 * http://www.stelselhandboek.nl `lookup www.stelselhandboek.nl: no such host`
 
-### https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/snapshot.html
-_Passed retest: https://csrc.nist.gov/publications/fips/fips197/fips-197.pdf_
-
-_Passed retest: https://www.rfc-editor.org/rfc/rfc8446_
-
+### https://logius-standaarden.github.io/Digikoppeling-Best-Practices-WUS/snapshot.html
+* http://wus.osb.gbo.overheid.nl/wsdl/compliance-v1%E2%80%9D `404 (following redirect https://www.overheid.nl/404/)`
 
 ### https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html
 _Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms_
