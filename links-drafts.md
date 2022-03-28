@@ -1,4 +1,4 @@
-## 39 broken links
+## 37 broken links
 
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
@@ -7,7 +7,6 @@
 * https://github.com/centrumvoorstandaarden/respec/wiki/specStatus `404`
 
 ### https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html
-* http://validatie.geostandaarden.nl/ `x509: certificate has expired or is not yet valid: current time 2022-03-21T05:09:52Z is after 2022-03-20T23:59:59Z (following redirect https://validatie.geostandaarden.nl/)`
 * http://www.rosettanet.org `dialing to the given TCP address timed out`
 _Passed retest: https://ec.europa.eu/isa2/eif_en_
 
@@ -62,7 +61,6 @@ _Passed retest: https://logius-standaarden.github.io/BOMOS-Verdieping/index.html
 
 
 ### https://logius-standaarden.github.io/BOMOS-Verdieping/snapshot.html
-* http://validatie.geostandaarden.nl/ `x509: certificate has expired or is not yet valid: current time 2022-03-21T05:09:52Z is after 2022-03-20T23:59:59Z (following redirect https://validatie.geostandaarden.nl/)`
 * http://www.rosettanet.org `dialing to the given TCP address timed out`
 _Passed retest: https://ec.europa.eu/isa2/eif_en_
 
