@@ -75,8 +75,6 @@ _Passed retest: https://logius-standaarden.github.io/API-Design-Rules/#api-51_
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/watisdk/
 * http://e-overheid.nl/images/stories/Publicaties/rapport_%20kba_def.pdf `404 (following redirect https://www.e-overheid.nl/images/stories/Publicaties/rapport_%20kba_def.pdf)`
-_Passed retest: http://ec.europa.eu/idabc/en/document/2319/5644.html_
-
 * http://www.logius.nl/producten/gegevensuitwisseling/digilevering/ `404 (following redirect https://logius.nl/producten/gegevensuitwisseling/digilevering/)`
 * http://www.logius.nl/producten/gegevensuitwisseling/digimelding/ `404 (following redirect https://logius.nl/producten/gegevensuitwisseling/digimelding/)`
 * http://www.logius.nl/producten/gegevensuitwisseling/stelselcatalogus/ `404 (following redirect https://logius.nl/producten/gegevensuitwisseling/stelselcatalogus/)`
