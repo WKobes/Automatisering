@@ -7,7 +7,7 @@ repos = org.get_repos()
 labels = org.get_repo('Automatisering').get_labels()
 
 for repo in repos:
-    if not (repo.name.startswith('Digikoppeling') or repo.name.startswith('BOMOS')):
+    if repo.name == 'Automatisering':
         continue
     print('Checking ' + repo.name)
     repo_labels = repo.get_labels()
