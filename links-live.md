@@ -1,4 +1,4 @@
-## 45 broken links
+## 32 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://publicatie.centrumvoorstandaarden.nl/api/adr/API-Design-Rules.pdf `404`
@@ -27,34 +27,17 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
 
-### https://publicatie.centrumvoorstandaarden.nl/dk/bpebms/
-* https://github.com/Logius-standaarden/%3Crepository%3E/issues/ `404`
-* https://github.com/Logius-standaarden/Logius-standaarden/%3Crepository%3E/pulls/ `404`
-* https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf `404`
-
 ### https://publicatie.centrumvoorstandaarden.nl/dk/bpgb/
 * http://www.stelselhandboek.nl `lookup www.stelselhandboek.nl: no such host`
-* https://my.host.nl/01234567890123456789/f47ac10b-58cc-4372-a567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
-* https://my.host.nl/2010/09/01/f47ac10b-58cc-4372-a567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
-* https://my.host.nl/f47ac10b-58cc-**4**372-**a**567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
-* https://my.host.nl:8443/f47ac10b-58cc-4372-a567-0e02b2c3d479 `lookup my.host.nl: No address associated with hostname`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/bpwus/
 * http://wus.osb.gbo.overheid.nl/wsdl/compliance-v1%E2%80%9D `404 (following redirect https://www.overheid.nl/404/)`
-* http://www.w3.org/TR/wsdlhttps://www.w3.org/TR/wsdl/#notation `404`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/ebms/
 * http://www.ean-ucc.org/roles/seller%5C `dialing to the given TCP address timed out`
 * http://www.logius.nl/digikoppeling/documentatie `404 (following redirect https://logius.nl/digikoppeling/documentatie)`
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
 * https://publicatie.centrumvoorstandaarden.nl/dk/ebms/www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf `404`
-* https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf `404`
-
-### https://publicatie.centrumvoorstandaarden.nl/dk/gb/
-* https://my.host.nl/files/file.001.zip `lookup my.host.nl: No address associated with hostname`
-* https://my.host.nl/files/file.002.zip `lookup my.host.nl: No address associated with hostname`
-* https://my.host.nl/files/file.pdf.z01 `lookup my.host.nl: No address associated with hostname`
-* https://my.host.nl/files/file.pdf.zip `lookup my.host.nl: No address associated with hostname`
 * https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf `404`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/gbachtcert/
