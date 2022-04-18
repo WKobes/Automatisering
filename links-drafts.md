@@ -1,4 +1,4 @@
-## 20 broken links
+## 12 broken links
 
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
@@ -47,47 +47,25 @@ _Passed retest: https://setu.semantic-treehouse.nl/#/ext/eValidator_
 ### https://logius-standaarden.github.io/Digikoppeling-Architectuur/snapshot.html
 _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340_
 
-* https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/2.0.0 `404`
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
+* https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles `403`
 
 ### https://logius-standaarden.github.io/Digikoppeling-Beheermodel/snapshot.html
 * https://logius-standaarden.github.io/Digikoppeling-Beheermodel/media/style.css `404`
 
-### https://logius-standaarden.github.io/Digikoppeling-Best-Practices-GB/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/bpgb/3.1.1 `404`
-
-### https://logius-standaarden.github.io/Digikoppeling-Best-Practices-WUS/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/bpwus/1.10.1 `404`
-
 ### https://logius-standaarden.github.io/Digikoppeling-Best-Practices-ebMS2/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/bpebms/3.2.1 `404`
+_Passed retest: http://www.ebxml.org/specs/ebcpp-2.0.pdf_
 
-### https://logius-standaarden.github.io/Digikoppeling-Gebruik-en-achtergrond-certificaten/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/gbachtcert/1.6.2 `404`
+_Passed retest: http://www.oasis-open.org/committees/ebxml-cppa/documents/ebcpp-2.0c.pdf_
 
-### https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/idauth/1.4.2 `404`
-
-### https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/gb/3.8.1 `404`
-
-### https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/restapi/1.0.0 `404`
-
-### https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/wus/3.8.1 `404`
 
 ### https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/ebms/3.3.1 `404`
-
-### https://logius-standaarden.github.io/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance/snapshot.html
-* https://publicatie.centrumvoorstandaarden.nl/dk/actueel/1.9.0 `404`
-
-### https://logius-standaarden.github.io/Digikoppeling-Wat-is-Digikoppeling/snapshot.html
-_Passed retest: http://ec.europa.eu/idabc/en/document/2319/5644.html_
-
+* https://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html `500`
 
 ### https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html
 _Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms_
 
+
+### https://logius-standaarden.github.io/OIN-Stelsel/snapshot.html
+* https://logius.nl/sites/default/files/public/bestanden/diensten/PKIoverheid/Programme%20of%20Requirements%20part%203j_%20Certificate%20Policy%20for%20Server%20certificates%20in%20Server%202020%20%28EV%20G1%29%20Domain-4.9.pdf `404`
