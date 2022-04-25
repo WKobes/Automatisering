@@ -1,4 +1,4 @@
-## 9 broken links
+## 7 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://publicatie.centrumvoorstandaarden.nl/api/adr/API-Design-Rules.pdf `404`
@@ -13,28 +13,22 @@ _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-an
 
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
-* https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles `403`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/2.0vv/
 _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340_
 
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
-* https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles `403`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/bpebms/
-_Passed retest: http://www.ebxml.org/specs/ebcpp-2.0.pdf_
-
-_Passed retest: http://www.oasis-open.org/committees/ebxml-cppa/documents/ebcpp-2.0c.pdf_
-
-_Passed retest: https://www.oasis-open.org/committees/download.php/272/ebMS_v2_0.pdf_
+_Passed retest: https://cparegister.minvenj.nl/logius_
 
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/ebms/
-_Passed retest: https://www.oasis-open.org/committees/download.php/272/ebMS_v2_0.pdf_
+_Passed retest: https://cparegister.minvenj.nl/logius_
 
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/oin/
