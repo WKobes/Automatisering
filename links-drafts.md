@@ -1,4 +1,4 @@
-## 12 broken links
+## 10 broken links
 
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
@@ -49,19 +49,9 @@ _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-an
 
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
-* https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles `403`
 
 ### https://logius-standaarden.github.io/Digikoppeling-Beheermodel/snapshot.html
 * https://logius-standaarden.github.io/Digikoppeling-Beheermodel/media/style.css `404`
-
-### https://logius-standaarden.github.io/Digikoppeling-Best-Practices-ebMS2/snapshot.html
-_Passed retest: http://www.ebxml.org/specs/ebcpp-2.0.pdf_
-
-_Passed retest: http://www.oasis-open.org/committees/ebxml-cppa/documents/ebcpp-2.0c.pdf_
-
-
-### https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/snapshot.html
-* https://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html `500`
 
 ### https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html
 _Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms_
