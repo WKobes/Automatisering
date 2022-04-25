@@ -12,7 +12,7 @@ rfcs = {}
 for repo in repos:
     pull_requests = repo.get_pulls(state='open', base='develop')
     for pr in pull_requests:
-        if pr.body.__contains__(issue_base + '#'):
+        if pr.body is not None and pr.body.__contains__(issue_base + '#'):
             loc = pr.body.find(issue_base) + len(issue_base) + 1
             number = int(pr.body[loc:loc+2])
             content = ''
