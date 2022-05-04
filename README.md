@@ -13,6 +13,7 @@ In de repository van iedere [ReSpec](https://respec.org/)-publicatie is een [scr
 * Genereer statische HTML-pagina
 * Controleer op WCAG-criteria
 * Genereer PDF-bestand
+* Publiceer naar _logius.nl_ via [Logius-standaarden/publicatie](https://github.com/Logius-standaarden/publicatie)
 
 
 ### Gebroken links

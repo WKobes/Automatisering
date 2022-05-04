@@ -21,7 +21,7 @@ jobs:
     needs: main
     name: PDF
     runs-on: ubuntu-latest
-    if: ${{ github.event_name != 'pull_request' && github.event_name != 'push' }}
+    if: ${{ github.event_name != 'pull_request'}}
     steps:
       - uses: actions/checkout@v2
       - run: git pull
