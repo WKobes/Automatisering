@@ -23,14 +23,6 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
 
-### https://publicatie.centrumvoorstandaarden.nl/dk/bpebms/
-_Passed retest: https://cparegister.minvenj.nl/logius_
-
-
-### https://publicatie.centrumvoorstandaarden.nl/dk/ebms/
-_Passed retest: https://cparegister.minvenj.nl/logius_
-
-
 ### https://publicatie.centrumvoorstandaarden.nl/dk/gbachtcert/
 * http://www.PKIoverheid.nl `lookup www.pkioverheid.nl: no such host`
 * http://www.pkioverheid.nl `lookup www.pkioverheid.nl: no such host`
