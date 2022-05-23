@@ -1,5 +1,11 @@
 ## 11 broken links
 
+### https://logius-standaarden.github.io/ADR-Beheermodel/snapshot.html
+_Passed retest: https://commonground.nl_
+
+_Passed retest: https://commonground.nl/_
+
+
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
 
@@ -59,6 +65,10 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 * http://www.PKIoverheid.nl `lookup www.pkioverheid.nl: no such host`
 * http://www.pkioverheid.nl `lookup www.pkioverheid.nl: no such host`
 * https://www.pkioverheid.nl/ `lookup www.pkioverheid.nl: no such host`
+
+### https://logius-standaarden.github.io/OAuth-Beheermodel/snapshot.html
+_Passed retest: https://commonground.nl/_
+
 
 ### https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html
 _Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms_
