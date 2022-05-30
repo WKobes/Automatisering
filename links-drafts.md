@@ -1,23 +1,14 @@
-## 11 broken links
-
-### https://logius-standaarden.github.io/ADR-Beheermodel/snapshot.html
-_Passed retest: https://commonground.nl_
-
-_Passed retest: https://commonground.nl/_
-
+## 12 broken links
 
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
 
 ### https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html
-_Passed retest: https://ec.europa.eu/isa2/isa2conf18/VocBench-3_en_
-
+* https://ec.europa.eu/isa2/isa2conf18/VocBench-3_en `404`
 * https://logius.nl/contact%5D `404`
 * https://publicatie.centrumvoorstandaarden.nl/bomos/bomos/ `404`
 
 ### https://logius-standaarden.github.io/BOMOS-Fundament/snapshot.html
-_Passed retest: https://ec.europa.eu/isa2/eif_en_
-
 _Passed retest: https://logius-standaarden.github.io/BOMOS-Verdieping/index.html#communicatie-bekendheid-creeren_
 
 _Passed retest: https://logius-standaarden.github.io/BOMOS-Verdieping/index.html#de-kosten-en-de-opbrengsten-activiteit-financien_
@@ -65,10 +56,6 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 * http://www.PKIoverheid.nl `lookup www.pkioverheid.nl: no such host`
 * http://www.pkioverheid.nl `lookup www.pkioverheid.nl: no such host`
 * https://www.pkioverheid.nl/ `lookup www.pkioverheid.nl: no such host`
-
-### https://logius-standaarden.github.io/OAuth-Beheermodel/snapshot.html
-_Passed retest: https://commonground.nl/_
-
 
 ### https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html
 _Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms_
