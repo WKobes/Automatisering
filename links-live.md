@@ -11,17 +11,29 @@ _Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-e
 ### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/
 _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340_
 
+_Passed retest: https://cparegister.minvenj.nl_
+
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/2.0vv/
 _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340_
 
+_Passed retest: https://cparegister.minvenj.nl_
+
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/bpebms/
+_Passed retest: https://cparegister.minvenj.nl/logius_
+
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/ebms/
+_Passed retest: https://cparegister.minvenj.nl/logius_
+
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/gbachtcert/
 * http://www.PKIoverheid.nl `lookup www.pkioverheid.nl: no such host`
