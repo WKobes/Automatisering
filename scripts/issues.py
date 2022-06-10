@@ -82,9 +82,10 @@ for label in labels:
             content += '\n## Overige punten\n'
             for issue in issuesOverig:
                 content += issue_format(issue)
-    if results[2] is not None: # Intro.md
+    intro = results[2]
+    if len(intro) > 0:  # Intro.md
         content += '\n# Toelichting\n'
-        content += results[2]
+        content += intro
     fn = fn.replace(' ', '-')
     os.makedirs(os.path.dirname(fn), exist_ok=True)
     f = open(fn, 'w')
