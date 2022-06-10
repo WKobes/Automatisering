@@ -53,17 +53,38 @@ for label in labels:
         results = intro_format('Programmeringstafels/' + name)
     fn = f'{results[0]}/README.md'
     content += results[1]  # Agenda
-    issues = org.get_issues(filter='all', labels=[label, groot])
-    content += '\n# Wijzigingen\n'
-    content += '\n## Grote wijzigingen\n'
+    issues = org.get_issues(filter='all', labels=[label])
+    issuesGroot = []
+    issuesKlein = []
+    issuesOverig = []
     for issue in issues:
-        content += issue_format(issue)
-    issues = org.get_issues(filter='all', labels=[label, klein])
-    content += '\n## Kleine wijzigingen\n'
-    for issue in issues:
-        content += issue_format(issue)
-    content += '\n# Toelichting\n'
-    content += results[2]  # Intro
+        issuesOverig.append(issue)
+        for issueLabel in issue.labels:
+            if issueLabel.name == groot.name:
+                issuesOverig.pop(-1)
+                issuesGroot.append(issue)
+                break
+            elif issueLabel.name == klein.name:
+                issuesOverig.pop(-1)
+                issuesKlein.append(issue)
+                break
+    if len(issuesGroot) + len(issuesKlein) + len(issuesOverig) > 0:
+        content += '\n# Punten\n'
+        if len(issuesGroot) > 0:
+            content += '\n## Grote wijzigingen\n'
+            for issue in issuesGroot:
+                content += issue_format(issue)
+        if len(issuesKlein) > 0:
+            content += '\n## Kleine wijzigingen\n'
+            for issue in issuesKlein:
+                content += issue_format(issue)
+        if len(issuesOverig) > 0:
+            content += '\n## Overige punten\n'
+            for issue in issuesOverig:
+                content += issue_format(issue)
+    if results[2] is not None: # Intro.md
+        content += '\n# Toelichting\n'
+        content += results[2]
     fn = fn.replace(' ', '-')
     os.makedirs(os.path.dirname(fn), exist_ok=True)
     f = open(fn, 'w')
