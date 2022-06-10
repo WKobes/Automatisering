@@ -17,7 +17,7 @@ def intro_format(name):
         for entry in contents:
             if entry.name.upper() == 'INTRO.MD':
                 intro = '\n\n' + requests.get(entry.download_url).text
-            elif entry.name.upper() == 'AGENDA.MD':
+            elif entry.name.upper() == 'TIJDPLAN.MD':
                 agenda = '\n\n' + requests.get(entry.download_url).text
     finally:
         return [path, agenda, intro]
