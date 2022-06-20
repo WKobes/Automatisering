@@ -1,4 +1,4 @@
-## 12 broken links
+## 13 broken links
 
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
@@ -48,6 +48,7 @@ _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-an
 
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
+* https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles `403`
 
 ### https://logius-standaarden.github.io/Digikoppeling-Beheermodel/snapshot.html
 * https://logius-standaarden.github.io/Digikoppeling-Beheermodel/media/style.css `404`
