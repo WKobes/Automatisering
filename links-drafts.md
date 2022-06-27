@@ -3,12 +3,14 @@
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
 
-### https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html
-* https://ec.europa.eu/isa2/isa2conf18/VocBench-3_en `404`
-* https://logius.nl/contact%5D `404`
-* https://publicatie.centrumvoorstandaarden.nl/bomos/bomos/ `404`
+### https://logius-standaarden.github.io/Automatisering/data/pages
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html `404`
+
+### https://logius-standaarden.github.io/Automatisering/data/pages.html
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html `404`
 
 ### https://logius-standaarden.github.io/BOMOS-Fundament/snapshot.html
+* https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules `404`
 _Passed retest: https://logius-standaarden.github.io/BOMOS-Verdieping/index.html#communicatie-bekendheid-creeren_
 
 _Passed retest: https://logius-standaarden.github.io/BOMOS-Verdieping/index.html#de-kosten-en-de-opbrengsten-activiteit-financien_
