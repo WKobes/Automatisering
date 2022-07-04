@@ -34,6 +34,8 @@ if len(pubDomain) * len(shortName) > 0:
         if len(publishVersion) > 0:
             shutil.copytree(content, f"{content}/{publishVersion}")
         path = f"publicatie/{pubDomain}/{shortName}/"
+        if not os.path.exists(path):
+            os.makedirs(path)
         for fn in os.listdir(path):
             # https://stackoverflow.com/a/185941
             file_path = os.path.join(path, fn)
