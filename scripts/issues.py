@@ -47,8 +47,10 @@ for label in labels:
     print(f'~ {name} ~')
     content = f'# {name}'
     results = []
-    if name == 'Technisch overleg':
+    if name == 'TO-DK':
         results = intro_format('Digikoppeling')
+    elif name == 'TO-OAuth':
+        results = intro_format('OAuth')
     else:
         results = intro_format('Programmeringstafels/' + name)
     fn = f'{results[0]}/README.md'
