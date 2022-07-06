@@ -3,8 +3,11 @@ import shutil
 
 
 def getValue(var, line):
+    comment = line.find("//")
     start = line.find("\"") + 1
     end = line.find("\",")
+    if (start * end == 0) or (comment > 0 and (comment < start)):
+        return False
     val = line[start:end]
     print(f"{var}: {val}")
     return val
@@ -20,12 +23,17 @@ publishVersion = ""
 
 for line in f:
     if "pubDomain" in line:
-        pubDomain = getValue("pubDomain", line)
+        val = getValue("pubDomain", line)
+        if val:
+            pubDomain = val
     elif "shortName" in line:
-        shortName = getValue("shortName", line)
+        val = getValue("shortName", line)
+        if val:
+            shortName = val
     elif "publishVersion" in line:
-        publishVersion = getValue("publishVersion", line)
-
+        val = getValue("publishVersion", line)
+        if val:
+            publishVersion = val
 f.close()
 os.remove(config)
 
