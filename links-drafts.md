@@ -1,4 +1,4 @@
-## 13 broken links
+## 14 broken links
 
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
@@ -34,6 +34,7 @@ _Passed retest: https://logius-standaarden.github.io/BOMOS-Verdieping/index.html
 _Passed retest: https://logius-standaarden.github.io/BOMOS-Verdieping/index.html#stimuleren-van-het-gebruik-van-standaarden-activiteit-adoptie-erkenning_
 
 * https://publicatie.centrumvoorstandaarden.nl/bomos/bomos/ `404`
+* https://www.forumstandaardisatie.nl/thema/open-standaarden `404`
 
 ### https://logius-standaarden.github.io/BOMOS-Verdieping/snapshot.html
 * http://www.rosettanet.org `dialing to the given TCP address timed out`
