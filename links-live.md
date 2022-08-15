@@ -1,4 +1,4 @@
-## 12 broken links
+## 17 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://publicatie.centrumvoorstandaarden.nl/api/adr/API-Design-Rules.pdf `404`
@@ -25,8 +25,21 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
 
+### https://publicatie.centrumvoorstandaarden.nl/dk/bpebms/
+_Passed retest: https://cparegister.minvenj.nl/logius_
+
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/ebms/
+_Passed retest: https://cparegister.minvenj.nl/logius_
+
+
 ### https://publicatie.centrumvoorstandaarden.nl/dk/gbachtcert/
 * http://www.PKIoverheid.nl `lookup www.pkioverheid.nl: no such host`
+* http://www.etsi.org/deliver/etsi_en/319400_319499/31941201/01.01.01_60/en_31941201v010101p.pdf `timeout`
+* http://www.etsi.org/deliver/etsi_ts/101800_101899/101862/01.03.03_60/ts_101862v010303p.pdf `timeout (following redirect https://www.etsi.org/deliver/etsi_ts/101800_101899/101862/01.03.03_60/ts_101862v010303p.pdf)`
+* http://www.etsi.org/deliver/etsi_ts/102100_102199/10217601/02.01.01_60/ts_10217601v020101p.pdf `timeout (following redirect https://www.etsi.org/deliver/etsi_ts/102100_102199/10217601/02.01.01_60/ts_10217601v020101p.pdf)`
+* http://www.etsi.org/deliver/etsi_ts/102100_102199/10217602/01.02.01_60/ts_10217602v010201p.pdf `timeout`
+* http://www.etsi.org/deliver/etsi_ts/102200_102299/102280/01.01.01_60/ts_102280v010101p.pdf `timeout`
 * http://www.pkioverheid.nl `lookup www.pkioverheid.nl: no such host`
 * https://www.pkioverheid.nl/ `lookup www.pkioverheid.nl: no such host`
 
