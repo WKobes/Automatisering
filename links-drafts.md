@@ -1,4 +1,4 @@
-## 15 broken links
+## 17 broken links
 
 ### https://logius-standaarden.github.io/Automatisering/
 * https://logius-standaarden.github.io/Automatisering/scripts/build.yml `404`
@@ -63,6 +63,10 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
 ### https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API/snapshot.html
 * https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API/media/style.css `404`
+* https://www.openbankingeurope.eu/media/2095/obe-json-web-signature-profile-for-open-banking.pdf `x509: certificate has expired or is not yet valid: current time 2022-09-12T06:11:17Z is after 2022-09-10T23:59:59Z (following redirect https://openbanking.exchange/europe/resources/publications/the-obe-europe-json-web-signature-profile)`
+
+### https://logius-standaarden.github.io/OAuth-Beheermodel/snapshot.html
+* https://github.com/Logius-standaarden/OAuth-Beheermodel/issues/ `429 (following redirect https://github.com/Logius-standaarden/OAuth-Beheermodel/pulls)`
 
 ### https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html
 _Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms_
