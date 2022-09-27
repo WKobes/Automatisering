@@ -1,4 +1,4 @@
-## 13 broken links
+## 12 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://publicatie.centrumvoorstandaarden.nl/api/adr/API-Design-Rules.pdf `404`
@@ -47,6 +47,3 @@ _Passed retest: https://cparegister.minvenj.nl/logius_
 * https://digitaleoverheid.pleio.nl/file/group/30207952/all#41536872 `404`
 * https://publicatie.centrumvoorstandaarden.nl/dk/oin/s `404`
 * https://www.logius.nl/sites/default/files/public/bestanden/diensten/PKIoverheid/PvE%20EN%20part3j%20v4.8%20DEF.pdf `404`
-
-### https://publicatie.centrumvoorstandaarden.nl/dk/restapi/
-* https://www.openbankingeurope.eu/media/2095/obe-json-web-signature-profile-for-open-banking.pdf `x509: certificate has expired or is not yet valid: current time 2022-09-12T06:56:50Z is after 2022-09-10T23:59:59Z (following redirect https://openbanking.exchange/europe/resources/publications/the-obe-europe-json-web-signature-profile)`
