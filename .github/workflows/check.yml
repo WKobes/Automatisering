@@ -30,7 +30,8 @@ jobs:
       - name: Local server
         run: python3 -m http.server 8080 &
       - name: Install muffet
-        run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
-        run: brew install muffet      
+        run: |
+          echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
+          brew install muffet      
       - name: Check links      
         run: muffet --one-page-only http://localhost:8080/snapshot.html
