@@ -42,5 +42,5 @@
 
 [OAuth-Beheermodel](https://logius-standaarden.github.io/OAuth-Beheermodel/snapshot.html)
 
-[NL profile for Cloudevents](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/snapshot.html)
+[NL profile for CloudEvents](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/snapshot.html)
 
