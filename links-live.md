@@ -1,4 +1,4 @@
-## 12 broken links
+## 9 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://publicatie.centrumvoorstandaarden.nl/api/adr/API-Design-Rules.pdf `404`
@@ -24,11 +24,6 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
-
-### https://publicatie.centrumvoorstandaarden.nl/dk/gbachtcert/
-* http://www.PKIoverheid.nl `lookup www.pkioverheid.nl: no such host`
-* http://www.pkioverheid.nl `lookup www.pkioverheid.nl: no such host`
-* https://www.pkioverheid.nl/ `lookup www.pkioverheid.nl: no such host`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/oin/
 * http://www.digitaleoverheid.nl=""> `lookup www.digitaleoverheid.nl="">: no such host`
