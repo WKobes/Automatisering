@@ -1,4 +1,4 @@
-## 9 broken links
+## 11 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://publicatie.centrumvoorstandaarden.nl/api/adr/API-Design-Rules.pdf `404`
@@ -11,6 +11,7 @@ _Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-e
 ### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/
 _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340_
 
+* https://cparegister.minvenj.nl `lookup cparegister.minvenj.nl: Temporary failure in name resolution`
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
 * https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles `403`
@@ -18,12 +19,21 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 ### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/2.0vv/
 _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340_
 
+* https://cparegister.minvenj.nl `lookup cparegister.minvenj.nl: Temporary failure in name resolution`
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
 * https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles `403`
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/bpebms/
+_Passed retest: https://cparegister.minvenj.nl/logius_
+
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/ebms/
+_Passed retest: https://cparegister.minvenj.nl/logius_
+
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/oin/
 * http://www.digitaleoverheid.nl=""> `lookup www.digitaleoverheid.nl="">: no such host`
