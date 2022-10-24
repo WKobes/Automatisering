@@ -1,4 +1,4 @@
-## 11 broken links
+## 9 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://publicatie.centrumvoorstandaarden.nl/api/adr/API-Design-Rules.pdf `404`
@@ -11,7 +11,8 @@ _Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-e
 ### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/
 _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340_
 
-* https://cparegister.minvenj.nl `lookup cparegister.minvenj.nl: Temporary failure in name resolution`
+_Passed retest: https://cparegister.minvenj.nl_
+
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
 * https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles `403`
@@ -19,7 +20,8 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 ### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/2.0vv/
 _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340_
 
-* https://cparegister.minvenj.nl `lookup cparegister.minvenj.nl: Temporary failure in name resolution`
+_Passed retest: https://cparegister.minvenj.nl_
+
 _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
 * https://www.upwork.com/resources/soap-vs-rest-a-look-at-two-different-api-styles `403`
@@ -40,3 +42,7 @@ _Passed retest: https://cparegister.minvenj.nl/logius_
 * https://digitaleoverheid.pleio.nl/file/group/30207952/all#41536872 `404`
 * https://publicatie.centrumvoorstandaarden.nl/dk/oin/s `404`
 * https://www.logius.nl/sites/default/files/public/bestanden/diensten/PKIoverheid/PvE%20EN%20part3j%20v4.8%20DEF.pdf `404`
+
+### https://publicatie.centrumvoorstandaarden.nl/dk/watisdk/
+_Passed retest: http://ec.europa.eu/idabc/en/document/2319/5644.html_
+
