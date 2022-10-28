@@ -8,11 +8,11 @@ jobs:
     steps:
       - run: mkdir ~/static
       - name: Cache HTML
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/static
           key: ${{ github.run_id }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Static HTML
         run: |
           npx respec --localhost --src index.html --out ~/static/snapshot.html
@@ -23,34 +23,29 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event_name != 'pull_request'}}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: git pull
       - name: Recover HTML
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/static
-          key: ${{ github.run_id }}
-      - name: Cache downloads
-        id: downloads
-        uses: actions/cache@v2
-        with:
-          path: ~/pdf
-          key: wkhtmltopdf
-      - name: Download files
-        if: steps.downloads.outputs.cache-hit != 'true'
+          key: ${{ github.run_id }}     
+      - name: Prepare files
         run: |
-          mkdir ~/pdf
-          wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb -O ~/pdf/wkhtmltopdf.deb
+         cp ./js/config.js config.js
+         echo "module.exports = { respecConfig };" >> config.js
+         mv ~/static/snapshot.html snapshot.html
+         npm i puppeteer
+         python3 -m http.server 8080 &
+         wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/pdf.js
       - name: Render PDF
         run: |
-         mv ~/static/snapshot.html snapshot.html
-         sudo apt-get install -y xfonts-base xfonts-75dpi
-         sudo dpkg -i ~/pdf/wkhtmltopdf.deb
-         wkhtmltopdf --enable-local-file-access snapshot.html doc.pdf       
-         wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/pdf-name.py
-         python pdf-name.py
-         rm pdf-name.py
-      - uses: stefanzweifel/git-auto-commit-action@v4
+         node pdf.js
+      - name: Clean-up
+        run: |
+         rm pdf.js config.js package.json package-lock.json
+         rm -r node_modules
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: snapshot
-  
