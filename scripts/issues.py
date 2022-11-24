@@ -4,8 +4,8 @@ import requests
 
 
 def intro_format(name):
-    print('Looking for intro in ' + name)
-    path = name
+    path = name.replace(" ", "-")
+    print('Looking for intro in ' + path)
     intro = ''
     agenda = ''
     try:
