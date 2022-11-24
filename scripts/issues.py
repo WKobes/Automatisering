@@ -51,6 +51,8 @@ for label in labels:
         results = intro_format('Digikoppeling')
     elif name == 'TO-OAuth':
         results = intro_format('OAuth')
+    elif name == 'BOMOS klankbord':
+        results = intro_format('BOMOS klankbord')
     else:
         results = intro_format('Programmeringstafels/' + name)
     fn = f'{results[0]}/README.md'
