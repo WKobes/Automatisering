@@ -44,3 +44,4 @@
 
 [NL profile for CloudEvents](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/snapshot.html)
 
+[Guidelines for NL profile CloudEvents](https://github.com/Logius-standaarden/CloudEvents-NL-Guidelines/snapshot.html)
