@@ -6,7 +6,6 @@ on:
         required: true
 jobs:
   release:
-    needs: build
     name: Release
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' && github.repository_owner == 'Logius-standaarden'}}
@@ -37,7 +36,6 @@ jobs:
          git commit -m "Release: ${{ github.event.repository.name }}"
          git push
   preview:
-    needs: build
     name: Preview
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork && github.repository_owner == 'Logius-standaarden' }}
