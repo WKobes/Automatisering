@@ -73,7 +73,7 @@ for label in labels:
                 issuesKlein.append(issue)
                 break
     if len(issuesGroot) + len(issuesKlein) + len(issuesOverig) > 0:
-        content += '\n# Punten\n'
+        content += '\n# Onderwerpen\n'
         if len(issuesGroot) > 0:
             content += '\n## Grote wijzigingen\n'
             for issue in issuesGroot:
