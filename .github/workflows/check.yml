@@ -4,7 +4,8 @@ on:
 jobs:  
   wcag:
     name: WCAG
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    if: ${{ false }}
     steps:
       - uses: actions/checkout@v3
       - name: Recover HTML
