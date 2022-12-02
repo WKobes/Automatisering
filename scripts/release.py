@@ -61,3 +61,6 @@ if len(pubDomain) * len(shortName) > 0:
         print("Created dir: " + path)
     except Exception as e:
         print(e)
+else:
+    print("Need \'pubDomain\' and \'shortName\' to create path! (case sensitive)")
+    sys.exit(2)
