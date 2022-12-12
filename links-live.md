@@ -1,4 +1,4 @@
-## 5 broken links
+## 6 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://publicatie.centrumvoorstandaarden.nl/api/adr/API-Design-Rules.pdf `404`
@@ -24,3 +24,4 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
+* https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf `timeout`
