@@ -25,11 +25,5 @@ _Passed retest: https://www.infoq.com/articles/no-reliable-messaging/_
 ### https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/
 * https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html `404`
 
-### https://publicatie.centrumvoorstandaarden.nl/dk/bpebms/
-_Passed retest: http://www.ebxml.org/specs/ebcpp-2.0.pdf_
-
-_Passed retest: http://www.oasis-open.org/committees/ebxml-cppa/documents/ebcpp-2.0c.pdf_
-
-
 ### https://publicatie.centrumvoorstandaarden.nl/dk/oin/
 * https://www.logius.nl/sites/default/files/public/bestanden/diensten/PKIoverheid/PoR-2022/PKIoverheid%20Programme%20of%20Requirements%20v4.10%20-%20Part%203j%20Certificate%20Policy%20for%20Server%20certificates%20in%20Server%202020%20%28EV%20G1%29%20Domain.pdf `404`
