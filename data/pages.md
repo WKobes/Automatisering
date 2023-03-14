@@ -2,7 +2,9 @@
 
 [BOMOS Verdieping](https://logius-standaarden.github.io/BOMOS-Verdieping/snapshot.html)
 
-[BOMOS Aanvullende modules](https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/snapshot.html)
+[BOMOS LinkedData](https://github.com/Logius-standaarden/BOMOS-LinkedData/snapshot.html)
+
+[BOMOS-Stelsels](https://github.com/Logius-standaarden/BOMOS-Stelsels/snapshot.html)
 
 [OAuth-NL-profiel](https://logius-standaarden.github.io/OAuth-NL-profiel/snapshot.html)
 
