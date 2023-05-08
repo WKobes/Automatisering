@@ -1,4 +1,4 @@
-## 9 broken links
+## 8 broken links
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/adr/
 * https://geonovum.github.io/KP-APIs/API-strategie-extensies/ `404`
@@ -6,7 +6,8 @@
 
 ### https://publicatie.centrumvoorstandaarden.nl/api/oauth/
 * http://localhost/ `dial tcp4 127.0.0.1:80: connect: connection refused`
-* https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms `403`
+_Passed retest: https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms_
+
 
 ### https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/
 _Passed retest: https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340_
