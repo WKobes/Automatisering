@@ -6,7 +6,7 @@ import re
 
 
 def intro_format(name):
-    path = name.replace(" ", "-").replace("/", "-")
+    path = name.replace(" ", "-")
     print('Looking for intro in ' + path)
     intro = ''
     agenda = ''
