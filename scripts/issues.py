@@ -6,7 +6,7 @@ import re
 
 
 def intro_format(name):
-    path = name.replace(" ", "-")
+    path = name.replace(" ", "-").replace("/", "-")
     print('Looking for intro in ' + path)
     intro = ''
     agenda = ''
@@ -55,6 +55,7 @@ labels = base.get_labels()
 klein = base.get_label('Scope: Klein')
 groot = base.get_label('Scope: Groot')
 repo = org.get_repo('Overleg')
+pt = ["Gegevensuitwisseling", "Infrastructuur", "Interactie", "Toegang"]
 
 for label in labels:
     if not label.name.startswith('Overleg: '):
@@ -67,10 +68,10 @@ for label in labels:
         results = intro_format('Digikoppeling')
     elif name == 'TO-OAuth':
         results = intro_format('OAuth')
-    elif name == 'BOMOS klankbord':
-        results = intro_format('BOMOS klankbord')
-    else:
+    elif name in pt:
         results = intro_format('Programmeringstafels/' + name)
+    else:
+        results = intro_format(name)    
     fn = f'{results[0]}/README.md'
     content += results[1]  # Agenda
     issues = org.get_issues(filter='all', labels=[label])
