@@ -3,11 +3,11 @@ on:
   workflow_call:
 jobs:
   main:
-    name: HTML
+    name: Snapshot
     runs-on: ubuntu-latest
     steps:
       - run: mkdir ~/static
-      - name: Cache HTML
+      - name: Create cache
         uses: actions/cache@v3
         with:
           path: ~/static
@@ -16,21 +16,8 @@ jobs:
       - name: Static HTML
         run: |
           npx respec --localhost --src index.html --out ~/static/snapshot.html
-
-  pdf:
-    needs: main
-    name: PDF
-    runs-on: ubuntu-latest
-    if: ${{ github.event_name != 'pull_request'}}
-    steps:
-      - uses: actions/checkout@v3
-      - run: git pull
-      - name: Recover HTML
-        uses: actions/cache@v3
-        with:
-          path: ~/static
-          key: ${{ github.run_id }}     
-      - name: Prepare files
+      - name: PDF
+        if: ${{ github.event_name != 'pull_request'}}
         run: |
          cp ./js/config.js config.js
          echo "module.exports = { respecConfig };" >> config.js
@@ -38,9 +25,7 @@ jobs:
          npm i puppeteer
          python3 -m http.server 8080 &
          wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/pdf.js
-      - name: Render PDF
-        run: node pdf.js
-      - name: Move PDF
-        run: |
+         rm *.pdf
+         node pdf.js      
          find *.pdf
          mv *.pdf ~/static/
