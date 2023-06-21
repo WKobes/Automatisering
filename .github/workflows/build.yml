@@ -34,18 +34,11 @@ jobs:
         run: |
          cp ./js/config.js config.js
          echo "module.exports = { respecConfig };" >> config.js
-         mv ~/static/snapshot.html snapshot.html
+         cp ~/static/snapshot.html snapshot.html
          npm i puppeteer
          python3 -m http.server 8080 &
          wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/pdf.js
       - name: Render PDF
         run: |
          node pdf.js
-      - name: Clean-up
-        run: |
-         rm pdf.js config.js package.json package-lock.json
-         rm -r node_modules
-      - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: snapshot
+         mv *.pdf ~/static/
