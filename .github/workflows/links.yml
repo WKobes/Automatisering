@@ -13,7 +13,7 @@ jobs:
       - run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
       - run: brew install muffet
       - name: Check
-        run: muffet --json https://publicatie.centrumvoorstandaarden.nl/ > muffet.json
+        run: muffet --json https://logius-standaarden.github.io/publicatie/ > muffet.json
         continue-on-error: true
       - name: Report
         run: python ./scripts/muffet-json.py
@@ -22,7 +22,7 @@ jobs:
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update links report (live)
+          commit_message: Update links report
           commit_user_name: GitHub Actions
           commit_user_email: api@logius.nl
           commit_author: Standaardenbeheer <api@logius.nl>
