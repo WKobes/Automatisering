@@ -17,6 +17,6 @@ In de repository van iedere [ReSpec](https://respec.org/)-publicatie is een [scr
 
 
 ### Gebroken links
-Iedere maandagochtend draait een controle op gebroken links in documenten gepubliceerd op https://gitdocumentatie.logius.nl/publicatie/.
+Iedere maandagochtend draait een controle op gebroken links in de [deze gepubliceerde documenten](https://gitdocumentatie.logius.nl/publicatie/scripts/paths.html).
 
-De resultaten worden gepresenteerd in [links-live.md](links-live.md).
+De resultaten worden gedeeld via e-mail.

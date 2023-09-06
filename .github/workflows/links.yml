@@ -6,23 +6,28 @@ on:
 name: Check links
 jobs:
   link-checker:
-    name: Check links (live)
+    name: Check links
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
       - run: brew install muffet
       - name: Check
-        run: muffet --json https://logius-standaarden.github.io/publicatie/ > muffet.json
+        run: muffet --json https://gitdocumentatie.logius.nl/publicatie/scripts/paths.html > muffet.json
         continue-on-error: true
       - name: Report
         run: python ./scripts/muffet-json.py
-      - run: mv links.md links-live.md
-      - run: rm muffet.json
-      - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
         with:
-          commit_message: Update links report
-          commit_user_name: GitHub Actions
-          commit_user_email: api@logius.nl
-          commit_author: Standaardenbeheer <api@logius.nl>
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: Broken links on gitdocumentatie
+          to: ${{secrets.MAIL_RECIPIENTS}}
+          from: Standaarden Bot
+          html_body: file://links.md
+          ignore_cert: true
+          convert_markdown: true
