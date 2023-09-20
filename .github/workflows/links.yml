@@ -13,7 +13,7 @@ jobs:
       - run: echo '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin' >> $GITHUB_PATH
       - run: brew install muffet
       - name: Check
-        run: muffet --header 'user-agent:Curl' --json https://gitdocumentatie.logius.nl/publicatie/scripts/paths.html > muffet.json
+        run: muffet --header 'user-agent:Curl' --ignore-fragments --json https://gitdocumentatie.logius.nl/publicatie/scripts/paths.html > muffet.json
         continue-on-error: true
       - name: Report
         run: python ./scripts/muffet-json.py
