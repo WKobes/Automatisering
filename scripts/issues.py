@@ -3,7 +3,8 @@ from github import Github
 import requests
 from bs4 import BeautifulSoup
 import re
-
+from datetime import date, datetime, time
+from babel.dates import format_date, format_datetime, format_time
 
 def intro_format(name):
     path = name.replace(" ", "-")
@@ -26,7 +27,8 @@ def intro_format(name):
 
 
 def issue_format(issue):
-    date = issue.created_at.strftime('%d %b. %Y')
+    date = issue.created_at
+    date = format_date(date, format='long', locale='nl_NL')
     status = ''
     pr = ''
     for label in issue.labels:
@@ -63,17 +65,30 @@ for label in labels:
     name = label.name[label.name.find(': ') + 2:]
     print(f'~ {name} ~')
     warning = '<!-----------------------------\n\n\n\n\n\n\n\n   Dit bestand wordt automatisch gegenereerd.\n   Handmatige toevoegingen worden overschreven.\n\n\n\n\n\n\n\n----------------------------->\n'
-    content = warning + f'# {name}'
+    titel = name
     results = []
     if name == 'TO-DK':
         results = intro_format('Digikoppeling')
+        titel = 'Technisch Overleg Digikoppeling'
     elif name == 'TO-OAuth':
         results = intro_format('OAuth')
+        titel = 'Technisch Overleg OAuth'
     elif name in pt:
         results = intro_format('Programmeringstafels/' + name)
     else:
         results = intro_format(name)    
     fn = f'{results[0]}/README.md'
+    date = results[0].split("/")[-1]
+    try:
+        datetime = datetime.strptime(date, '%Y-%m-%d')
+        date = '\n\n' + format_date(datetime, format='full', locale='nl_NL')
+        if datetime.date() < datetime.now().date():
+            print('Skipping date in past')
+            continue
+    except:
+        print('No date found')
+        date = ''
+    content = warning + f'# {titel}{date}'
     content += results[1]  # Agenda
     issues = org.get_issues(filter='all', labels=[label])
     issuesGroot = []
@@ -91,22 +106,22 @@ for label in labels:
                 issuesKlein.append(issue)
                 break
     if len(issuesGroot) + len(issuesKlein) + len(issuesOverig) > 0:
-        content += '\n# Onderwerpen\n'
+        content += '\n## Onderwerpen\n'
         if len(issuesGroot) > 0:
-            content += '\n## Grote wijzigingen\n'
+            content += '\n### Grote wijzigingen\n'
             for issue in issuesGroot:
                 content += issue_format(issue)
         if len(issuesKlein) > 0:
-            content += '\n## Kleine wijzigingen\n'
+            content += '\n### Kleine wijzigingen\n'
             for issue in issuesKlein:
                 content += issue_format(issue)
         if len(issuesOverig) > 0:
-            content += '\n## Overige punten\n'
+            content += '\n### Overige punten\n'
             for issue in issuesOverig:
                 content += issue_format(issue)
     intro = results[2]
     if len(intro) > 0:  # Intro.md
-        content += '\n# Toelichting\n'
+        content += '\n## Toelichting\n'
         content += intro
     fn = fn.replace(' ', '-')
     os.makedirs(os.path.dirname(fn), exist_ok=True)
