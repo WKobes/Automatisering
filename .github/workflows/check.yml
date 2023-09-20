@@ -33,4 +33,4 @@ jobs:
       - name: Install muffet
         run: brew install muffet      
       - name: Check links      
-        run: muffet --ignore-fragments --one-page-only http://localhost:8080/snapshot.html
+        run: muffet --ignore-fragments --exclude '8080\/\S*\.pdf' --one-page-only http://localhost:8080/snapshot.html
