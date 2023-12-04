@@ -64,7 +64,7 @@ for label in labels:
         continue
     name = label.name[label.name.find(': ') + 2:]
     print(f'~ {name} ~')
-    warning = '<!-----------------------------\n\n\n\n\n\n\n\n   Dit bestand wordt automatisch gegenereerd.\n   Handmatige toevoegingen worden overschreven.\n\n\n\n\n\n\n\n----------------------------->\n'
+    warning = '<!-----------------------------\n\n\n\n\n\n\n\n   :warning: Dit bestand wordt automatisch gegenereerd.\n   :warning: Handmatige toevoegingen worden overschreven.\n\n\n\n\n\n\n\n----------------------------->\n'
     titel = name
     results = []
     if name == 'TO-DK':
