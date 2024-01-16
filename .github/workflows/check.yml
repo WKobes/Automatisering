@@ -33,4 +33,9 @@ jobs:
       - name: Install muffet
         run: brew install muffet      
       - name: Check links      
-        run: muffet --header 'user-agent:Curl' --ignore-fragments --exclude '8080\/\S*\.pdf' --one-page-only http://localhost:8080/snapshot.html
+        run: >
+          muffet
+          --exclude '8080\/\S*\.pdf'
+          --exclude 'upwork.com'
+          --exclude 'sitearchief.nl'
+          --header 'user-agent:Curl' --ignore-fragments --one-page-only http://localhost:8080/snapshot.html
