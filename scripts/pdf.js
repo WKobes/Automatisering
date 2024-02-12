@@ -25,7 +25,10 @@ else {
       const page = await browser.newPage();
       const website_url = 'http://localhost:8080/snapshot.html';
       await page.goto(website_url, { waitUntil: 'networkidle0' });
-      await page.waitForTimeout(4000); // Give JS scripts some time
+      await page.waitFor(() => {
+        // Give JS scripts some time
+        return true;
+      }, { timeout: 4000 });      
       await page.emulateMediaType('print');
       await page.addStyleTag({ content: '.sidelabel {position: absolute}' })
       const pdf = await page.pdf({
