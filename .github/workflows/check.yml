@@ -39,4 +39,4 @@ jobs:
           --exclude 'upwork.com'
           --exclude 'sitearchief.nl'
           --header 'user-agent:Curl' --ignore-fragments --one-page-only http://localhost:8080/snapshot.html
-          ----buffer-size 8192
+          --buffer-size 8192
