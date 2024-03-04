@@ -12,15 +12,7 @@ with open('muffet.json') as file:
         if re.search("publicatie\/[^\/]+\/[^\/]+\/$", page['url']):
             content += '\n### ' + page['url'] + '\n'
             page['links'] = sorted(page['links'], key=lambda k: k['url'])
-            for link in page['links']:                
-                try:  # Double-check
-                    r = requests.get(link['url'], timeout=5)
-                    if r.status_code == 200 or r.status_code == 301:
-                        content += '\n_Passed retest: ' + link['url'] + '_\n'
-                        errors -= 1
-                        continue  # Passed
-                except:
-                    print('Could not double-check ' + link['url'])
+            for link in page['links']:
                 errors += 1
                 content += '* ' + link['url'] + ' `' + link['error'] + '`' + '\n'
 
