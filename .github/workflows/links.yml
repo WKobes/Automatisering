@@ -18,7 +18,7 @@ jobs:
             --header 'user-agent:Curl'
             --ignore-fragments
             --json
-            --accepted-status-codes 200..300,301,403
+            --accepted-status-codes 200..300,301,403,429
             --buffer-size 8192
             https://gitdocumentatie.logius.nl/publicatie/scripts/paths.html
             > muffet.json
