@@ -38,5 +38,6 @@ jobs:
           --exclude '8080\/\S*\.pdf'
           --exclude 'upwork.com'
           --exclude 'sitearchief.nl'
+          --exclude 'opengis.net'
           --header 'user-agent:Curl' --ignore-fragments --one-page-only http://localhost:8080/snapshot.html
           --buffer-size 8192

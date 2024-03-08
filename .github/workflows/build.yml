@@ -16,8 +16,16 @@ jobs:
       - name: Static HTML
         run: |
           npx respec --localhost --src index.html --out ~/static/snapshot.html
-      - name: PDF
+      - name: Check config
+        id: config
         if: ${{ github.event_name == 'push'}}
+        run: |
+         echo "grep=false" >> $GITHUB_OUTPUT
+         if grep -q alternateFormats ./js/config.js; then
+         echo "grep=true" >> $GITHUB_OUTPUT
+         fi
+      - name: PDF
+        if: ${{ steps.config.outputs.grep == 'true' }}
         run: |
          cp ./js/config.js config.js
          echo "module.exports = { respecConfig };" >> config.js
