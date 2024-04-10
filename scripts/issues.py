@@ -6,24 +6,18 @@ import re
 from datetime import date, datetime, time
 from babel.dates import format_date, format_datetime, format_time
 
-def intro_format(name):
+def find_path(name):
     path = name.replace(" ", "-")
-    print('Looking for intro in ' + path)
-    intro = ''
-    agenda = ''
+    print('Looking for path in ' + path)
     try:
         contents = repo.get_contents(path=path)
         for entry in contents:
             if entry.name[0] == '2' and entry.type == 'dir':
                 path = entry.path
         contents = repo.get_contents(path=path)
-        for entry in contents:
-            if entry.name.upper() == 'INTRO.MD':
-                intro = '\n\n' + requests.get(entry.download_url).text
-            elif entry.name.upper() == 'TIJDPLAN.MD':
-                agenda = '\n\n' + requests.get(entry.download_url).text
     finally:
-        return [path, agenda, intro]
+        print('Path: ' + path)
+        return path
 
 
 def issue_format(issue):
@@ -59,26 +53,27 @@ groot = base.get_label('Scope: Groot')
 repo = org.get_repo('Overleg')
 pt = ["Gegevensuitwisseling", "Infrastructuur", "Interactie", "Toegang"]
 
+split = '<!-- comment niet verwijderen s.v.p. -->'
+
 for label in labels:
     if not label.name.startswith('Overleg: '):
         continue
     name = label.name[label.name.find(': ') + 2:]
     print(f'~ {name} ~')
-    warning = '<!-----------------------------\n\n\n\n\n\n\n\n   :warning: Dit bestand wordt automatisch gegenereerd.\n   :warning: Handmatige toevoegingen worden overschreven.\n\n\n\n\n\n\n\n----------------------------->\n'
     titel = name
-    results = []
+    path = ''
     if name == 'TO-DK':
-        results = intro_format('Digikoppeling')
+        path = find_path('Digikoppeling')
         titel = 'Technisch Overleg Digikoppeling'
     elif name == 'TO-OAuth':
-        results = intro_format('OAuth')
+        path = find_path('OAuth')
         titel = 'Technisch Overleg OAuth'
     elif name in pt:
-        results = intro_format('Programmeringstafels/' + name)
+        path = find_path('Programmeringstafels/' + name)
     else:
-        results = intro_format(name)    
-    fn = f'{results[0]}/README.md'
-    date = results[0].split("/")[-1]
+        path = find_path(name)    
+    fn = f'{path}/README.md'
+    date = path.split("/")[-1]
     try:
         datetime = datetime.strptime(date, '%Y-%m-%d')
         date = '\n\n' + format_date(datetime, format='full', locale='nl_NL')
@@ -88,8 +83,6 @@ for label in labels:
     except:
         print('No date found')
         date = ''
-    content = warning + f'# {titel}{date}'
-    content += results[1]  # Agenda
     issues = org.get_issues(filter='all', labels=[label])
     issuesGroot = []
     issuesKlein = []
@@ -106,7 +99,7 @@ for label in labels:
                 issuesKlein.append(issue)
                 break
     if len(issuesGroot) + len(issuesKlein) + len(issuesOverig) > 0:
-        content += '\n## Onderwerpen\n'
+        content = f'\n{split}\n<!-- Alles onder deze regel wordt automatisch overschreven -->\n## Onderwerpen\n'
         if len(issuesGroot) > 0:
             content += '\n### Grote wijzigingen\n'
             for issue in issuesGroot:
@@ -119,13 +112,22 @@ for label in labels:
             content += '\n### Overige punten\n'
             for issue in issuesOverig:
                 content += issue_format(issue)
-    intro = results[2]
-    if len(intro) > 0:  # Intro.md
-        content += '\n## Toelichting\n'
-        content += intro
     fn = fn.replace(' ', '-')
     os.makedirs(os.path.dirname(fn), exist_ok=True)
-    f = open(fn, 'w')
+    contentPrevious = ''
+    try:
+        f = open(fn, 'r+')
+        contentPrevious = f.read()
+    except:
+        f = open(fn, 'a+')
+        print('No previous content')
+
+    contentList = contentPrevious.split(split)
+    if len(contentList) < 3:
+        contentList = ['','\n\n<!-- Toelichting, agenda, e.d. kan hier -->\n\n\n','']
+    contentList[0] = f'# {titel}{date}\n<!-- Titel en datum zijn automatisch -->\n{split}'
+    contentList[2] = content
+    content = ''.join(contentList)
     print('Writing to ' + fn)
     f.write(content)
     f.close()
