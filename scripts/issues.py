@@ -36,7 +36,7 @@ def issue_format(issue):
             status = f', _{label.name}_'
     events = issue.get_events()
     for event in events:
-        if event.event == 'connected':
+        if event.event == 'connected' and not hasattr(issue, 'pull_request'):
             # href finder from https://stackoverflow.com/a/60780499
             r = requests.get(issue.html_url)
             soup = BeautifulSoup(r.text, 'html.parser')
