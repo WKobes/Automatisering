@@ -99,7 +99,7 @@ for label in labels:
                 issuesKlein.append(issue)
                 break
     if len(issuesGroot) + len(issuesKlein) + len(issuesOverig) > 0:
-        content = f'\n{split}\n<!-- Alles onder deze regel wordt automatisch overschreven -->\n## Onderwerpen\n'
+        content = f'\n<!-- Overzicht issues is automatisch -->\n## Onderwerpen\n'
         if len(issuesGroot) > 0:
             content += '\n### Grote wijzigingen\n'
             for issue in issuesGroot:
@@ -121,13 +121,16 @@ for label in labels:
     except:
         f = open(fn, 'a+')
         print('No previous content')
-
+    f.seek(0)
     contentList = contentPrevious.split(split)
-    if len(contentList) < 3:
-        contentList = ['','\n\n<!-- Toelichting, agenda, e.d. kan hier -->\n\n\n','']
-    contentList[0] = f'# {titel}{date}\n<!-- Titel en datum zijn automatisch -->\n{split}'
+    if len(contentList) != 4:
+        contentList = [''] * 4
+        contentList[1] += '\n\n<!-- Introductie, agenda, e.d. kan hier -->\n\n\n'
+        contentList[3] += '\n\n<!-- Toelichting kan hier -->\n\n\n'
+    contentList[0] = f'# {titel}{date}\n<!-- Titel en datum zijn automatisch -->\n'
     contentList[2] = content
-    content = ''.join(contentList)
+    content = f'{split}'.join(contentList)
     print('Writing to ' + fn)
     f.write(content)
+    f.truncate()
     f.close()
