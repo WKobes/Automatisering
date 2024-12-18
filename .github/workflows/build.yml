@@ -13,6 +13,14 @@ jobs:
           path: ~/static
           key: ${{ github.run_id }}
       - uses: actions/checkout@v4
+      - name: PlantUML
+        run: |
+          cd ./diagrams
+          for file in ./*.puml
+          do
+            docker run --rm -i registry.gitlab.com/commonground/nlx/images/plantuml:latest -svg "$file"
+          done
+          cd ..
       - name: Static HTML
         run: |
           npx respec --localhost --src index.html --out ~/static/snapshot.html
