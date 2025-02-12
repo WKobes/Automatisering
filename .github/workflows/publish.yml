@@ -8,7 +8,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'push' && github.repository_owner == 'Logius-standaarden'}}
+    if: ${{ github.event_name == 'push' && github.repository_owner == 'Logius-standaarden' && github.ref_name == 'main' }}
     steps:
       - uses: actions/checkout@v4
       - name: Recover HTML
@@ -35,10 +35,51 @@ jobs:
          git config user.email "api@logius.nl"
          git diff-index --quiet HEAD || git commit -m "Release: ${{ github.event.repository.name }}"
          git push
+  upload_develop_artifacts:
+    name: Upload develop artifacts
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' && github.repository_owner == 'Logius-standaarden' && github.ref_name == 'develop' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover HTML
+        uses: actions/cache@v4
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
+      - name: Rename index
+        run: |
+          rm index.html
+          mv ~/static/snapshot.html index.html
+          rm -f *.md *.pdf *.js snapshot.html
+          mkdir ~/content
+          mv ./* ~/content
+          mkdir _site
+          mv ~/content/* _site
+      - name: Upload static files as artifact
+        id: upload_pages_artifact
+        uses: actions/upload-pages-artifact@v3
+  deploy-develop:
+    name: Deploy develop
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.upload_pages_artifact.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: upload_develop_artifacts
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
   preview:
     name: Preview
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork && github.repository_owner == 'Logius-standaarden' && github.head_ref != 'develop' }}
+    env:
+      ORGANISATION_URL: https://logius-standaarden.github.io
+      PREVIEW_REPOSITORY_NAME: Publicatie-Preview
+      REPOSITORY_NAME_AND_BRANCH: ${{ github.event.repository.name }}/${{ github.head_ref }}
     steps:
       - uses: actions/checkout@v4
       - name: Recover HTML
@@ -53,13 +94,13 @@ jobs:
          rm -f *.md *.pdf *.js snapshot.html
          mkdir ~/content
          mv ./* ~/content
-         git clone https://user:${{ secrets.BEHEER }}@github.com/Logius-standaarden/Publicatie-Preview.git
+         git clone https://user:${{ secrets.BEHEER }}@github.com/Logius-standaarden/$PREVIEW_REPOSITORY_NAME.git
       - name: Commit preview
         run: |
-         cd Publicatie-Preview
-         rm -f -r ${{ github.event.repository.name }}/${{ github.head_ref }}
-         mkdir -p ${{ github.event.repository.name }}/${{ github.head_ref }}
-         mv ~/content/* ${{ github.event.repository.name }}/${{ github.head_ref }}
+         cd $PREVIEW_REPOSITORY_NAME
+         rm -f -r $REPOSITORY_NAME_AND_BRANCH
+         mkdir -p $REPOSITORY_NAME_AND_BRANCH
+         mv ~/content/* $REPOSITORY_NAME_AND_BRANCH
          git add -A
          git config user.name "GitHub Action"
          git config user.email "api@logius.nl"
@@ -76,8 +117,11 @@ jobs:
       - name: Post preview link
         if: steps.findcomment.outputs.comment-id == ''
         uses: peter-evans/create-or-update-comment@v4
+        env:
+          PREVIEW_LINK_URL: ${{ env.ORGANISATION_URL }}/${{ env.PREVIEW_REPOSITORY_NAME }}/${{ env.REPOSITORY_NAME_AND_BRANCH }}
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            [Preview link voor pull request](https://logius-standaarden.github.io/Publicatie-Preview/${{ github.event.repository.name }}/${{ github.head_ref }})
+            [Preview link voor pull request](${{ env.PREVIEW_LINK_URL }})
+            [Diff met W3CDiff](https://services.w3.org/htmldiff?doc1=${{ env.ORGANISATION_URL }}/${{ github.event.repository.name }}&doc2=${{ env.PREVIEW_LINK_URL }})
 
