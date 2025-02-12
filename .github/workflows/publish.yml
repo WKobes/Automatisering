@@ -7,7 +7,7 @@ on:
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: ${{ github.event_name == 'push' && github.repository_owner == 'Logius-standaarden' && github.ref_name == 'main' }}
     steps:
       - uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
          git push
   upload_develop_artifacts:
     name: Upload develop artifacts
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: ${{ github.event_name == 'push' && github.repository_owner == 'Logius-standaarden' && github.ref_name == 'develop' }}
     steps:
       - uses: actions/checkout@v4
@@ -66,7 +66,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.upload_pages_artifact.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: upload_develop_artifacts
     steps:
       - name: Deploy to GitHub Pages
@@ -74,7 +74,7 @@ jobs:
         uses: actions/deploy-pages@v4
   preview:
     name: Preview
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: ${{ github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork && github.repository_owner == 'Logius-standaarden' && github.head_ref != 'develop' }}
     env:
       ORGANISATION_URL: https://logius-standaarden.github.io

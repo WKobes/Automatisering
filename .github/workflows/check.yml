@@ -4,7 +4,7 @@ on:
 jobs:  
   wcag:
     name: WCAG
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - name: Recover HTML
@@ -18,7 +18,7 @@ jobs:
 
   links:
     name: Links
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - name: Recover HTML
