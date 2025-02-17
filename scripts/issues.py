@@ -27,6 +27,7 @@ def intro_format(name):
 
 
 def issue_format(issue):
+    print(f'Processing {issue.repository.name}/#{issue.number}')
     date = issue.created_at
     date = format_date(date, format='long', locale='nl_NL')
     status = ''
