@@ -31,24 +31,11 @@ def issue_format(issue):
     date = issue.created_at
     date = format_date(date, format='long', locale='nl_NL')
     status = ''
-    pr = ''
     for label in issue.labels:
         if label.name.startswith('Status: '):
             status = f', _{label.name}_'
     events = issue.get_events()
-    for event in events:
-        if event.event == 'connected' and issue.pull_request is None:
-            # href finder from https://stackoverflow.com/a/60780499
-            r = requests.get(issue.html_url)
-            soup = BeautifulSoup(r.text, 'html.parser')
-            issueForm = soup.find("form", {"aria-label": re.compile('Link issues')})
-            href = [i["href"] for i in issueForm.find_all("a")]
-            r = re.compile('pull\/([^\/]+)\/?$')
-            found = list(filter(r.search, href))[0]
-            # pullnumber = r.search(found).group(1)            
-            pr = f'\n  * [Wijzigingsvoorstel](https://github.com/{found}/files)'
-            break
-    return f'* {issue.repository.name} [issue #{issue.number}] [{issue.title}]({issue.html_url}) ({date}){status}{pr}\n'
+    return f'* {issue.repository.name} [issue #{issue.number}] [{issue.title}]({issue.html_url}) ({date}){status}\n'
 
 
 g = Github(os.environ['BEHEER'])
