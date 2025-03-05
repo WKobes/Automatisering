@@ -61,6 +61,9 @@ for label in labels:
     elif name == 'TO-OAuth':
         results = intro_format('OAuth')
         titel = 'Technisch Overleg OAuth'
+    elif name == 'TO-API':
+        results = intro_format('API')
+        titel = 'Technisch Overleg API'
     elif name in pt:
         results = intro_format('Programmeringstafels/' + name)
     else:
