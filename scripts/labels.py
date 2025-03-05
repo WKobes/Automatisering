@@ -9,6 +9,8 @@ labels = org.get_repo('Automatisering').get_labels()
 for repo in repos:
     if repo.name == 'Automatisering':
         continue
+    if repo.archived:
+        continue
     print('* Checking ' + repo.name)
     try:
         repo_labels = repo.get_labels()
