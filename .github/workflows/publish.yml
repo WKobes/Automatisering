@@ -8,7 +8,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-22.04
-    if: ${{ github.event_name == 'push' && github.repository_owner == 'Logius-standaarden' && ( github.ref_name == 'main' || github.ref_name == 'master' ) }}
+    if: ${{ github.event_name == 'push' && github.repository_owner == 'Logius-standaarden' && ( github.ref_name == 'main' || github.ref_name == 'master' || github.ref_name == 'en' ) }}
     steps:
       - uses: actions/checkout@v4
       - name: Recover HTML
