@@ -13,8 +13,26 @@ jobs:
           path: ~/static
           key: ${{ github.run_id }}
       - run: mv ~/static/snapshot.html snapshot.html
-      - run: npm install -g pa11y
-      - run: pa11y snapshot.html --ignore WCAG2AA.Principle4.Guideline4_1.4_1_1.F77
+      - run: npm install @axe-core/cli browser-driver-manager -g
+      - run: npx browser-driver-manager install chrome
+      - name: Serve Files
+        uses: Eun/http-server-action@v1
+        with:
+          content-types: |
+            {
+              "css": "text/css",
+              "html": "text/html",
+              "ico": "image/x-icon",
+              "jpeg": "image/jpeg",
+              "jpg": "image/jpeg",
+              "js": "text/javascript",
+              "json": "application/json",
+              "png": "image/png",
+              "svg": "image/svg+xml",
+              "txt": "text/plain",
+              "xml": "text/xml"
+            }
+      - run: axe http://localhost:8080/snapshot.html --exit --tags wcag2aa
 
   links:
     name: Links
