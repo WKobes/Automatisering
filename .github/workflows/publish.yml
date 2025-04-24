@@ -50,7 +50,7 @@ jobs:
         run: |
           rm index.html
           mv ~/static/snapshot.html index.html
-          rm -f *.md *.pdf *.js snapshot.html
+          rm -f *.md *.js snapshot.html
           mkdir ~/content
           mv ./* ~/content
           mkdir _site
