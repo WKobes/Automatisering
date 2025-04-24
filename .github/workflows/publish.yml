@@ -49,8 +49,9 @@ jobs:
       - name: Rename index
         run: |
           rm index.html
-          mv ~/static/snapshot.html index.html
-          rm -f *.md *.js snapshot.html
+          mv ~/static/* ./
+          mv snapshot.html index.html
+          rm -f *.md *.js
           mkdir ~/content
           mv ./* ~/content
           mkdir _site
