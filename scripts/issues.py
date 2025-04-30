@@ -81,6 +81,13 @@ for label in labels:
         date = ''
     content = warning + f'# {titel}{date}'
     content += results[1]  # Agenda
+    if name.startswith('TO'):
+        adres = 'digikoppeling' if name.endswith('DK') else 'api'
+        content += f"""
+## Aanmelden
+
+Dit overleg is openbaar. Aanmelden kan door te mailen naar {adres}@logius.nl
+"""
     issues = org.get_issues(filter='all', labels=[label])
     issuesGroot = []
     issuesKlein = []
