@@ -1,0 +1,12 @@
+default: true
+
+heading-style:
+  style: atx
+
+ul-style:
+  style: consistent
+
+line-length: false
+no-inline-html: false
+first-line-h1: false
+emphasis-style: false

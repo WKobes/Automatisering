@@ -33,6 +33,19 @@ jobs:
               "xml": "text/xml"
             }
       - run: axe http://localhost:8080/snapshot.html --exit --tags wcag2aa
+  
+  markdownlint:
+    name: Markdownlint
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+      - name: Download configuration
+        run: wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/pr-timvdlippe-markdownlint/scripts/.markdownlint.yaml
+      - name: Run linter
+        if: ${{ hashFiles('sections/') != '' }}
+        run: markdownlint sections/
 
   links:
     name: Links
