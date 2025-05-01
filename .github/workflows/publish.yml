@@ -15,15 +15,11 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/static
-          key: ${{ github.run_id }}      
+          key: ${{ github.run_id }}
       - name: Gather files
-        run: |         
-         rm -f *.md *.html
-         mv ~/static/* ./
-         mv snapshot.html index.html
-         mkdir content
-         shopt -s extglob
-         mv !(content) content
+        run: |
+         wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/gather-files.sh
+         bash gather-files.sh
          git clone https://user:${{ secrets.BEHEER }}@github.com/Logius-standaarden/publicatie.git
       - name: Commit release
         run: |
@@ -48,12 +44,8 @@ jobs:
           key: ${{ github.run_id }}
       - name: Rename index
         run: |
-          rm index.html
-          mv ~/static/* ./
-          mv snapshot.html index.html
-          rm -f *.md *.js
-          mkdir ~/content
-          mv ./* ~/content
+          wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/gather-files.sh
+          bash gather-files.sh
           mkdir _site
           mv ~/content/* _site
       - name: Upload static files as artifact
@@ -87,14 +79,11 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/static
-          key: ${{ github.run_id }}      
+          key: ${{ github.run_id }}
       - name: Gather files
         run: |
-         rm index.html
-         mv ~/static/snapshot.html index.html
-         rm -f *.md *.pdf *.js snapshot.html
-         mkdir ~/content
-         mv ./* ~/content
+         wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/gather-files.sh
+         bash gather-files.sh
          git clone https://user:${{ secrets.BEHEER }}@github.com/Logius-standaarden/$PREVIEW_REPOSITORY_NAME.git
       - name: Commit preview
         run: |
