@@ -78,14 +78,7 @@ jobs:
       - run: echo '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin' >> $GITHUB_PATH
       - name: Install muffet
         run: brew install muffet      
-      - name: Check links      
-        run: >
-          muffet
-          --exclude '8080\/\S*\.pdf'
-          --exclude '^https:\/\/gitdocumentatie.*(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P<patch>0|[1-9]\d*)(?:-(?P<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?'
-          --exclude 'upwork.com'
-          --exclude 'sitearchief.nl'
-          --exclude 'opengis.net'
-          --exclude 'https://www.nen.nl/nen-7513-2024-nl-329182'
-          --header 'user-agent:Curl' --ignore-fragments --one-page-only http://localhost:8080/snapshot.html
-          --buffer-size 8192
+      - name: Check links
+        run: |
+          wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/run-muffet.sh
+          bash run-muffet.sh http://localhost:8080/snapshot.html
