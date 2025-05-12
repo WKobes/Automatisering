@@ -1,4 +1,4 @@
 require("./js/config.js");
-const {pubDomain, shortName} = globalThis.respecConfig;
+const {pubDomain, shortName, publishVersion} = globalThis.respecConfig;
 
-console.log(`${pubDomain}/${shortName}`);
+console.log(`${pubDomain}/${shortName}/${publishVersion}`);
