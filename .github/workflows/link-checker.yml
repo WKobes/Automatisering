@@ -13,7 +13,8 @@ jobs:
     if: ${{ github.repository_owner == 'Logius-standaarden' && github.repository != 'Logius-standaarden/ReSpec-template' }}
     steps:
       - uses: actions/checkout@v4
-        ref: main
+        with:
+          ref: main
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
       - name: Install muffet
