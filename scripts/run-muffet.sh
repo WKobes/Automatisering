@@ -4,6 +4,7 @@ echo "Checking $URL_TO_CHECK"
 
 muffet \
     --exclude '8080\/\S*\.pdf' \
+    --exclude 'gitdocumentatie\.logius\.nl\/publicatie\/\w+\/\w+\/\d+\.\d+\.\d+' \
     --exclude 'upwork.com' \
     --exclude 'sitearchief.nl' \
     --exclude 'opengis.net' \
