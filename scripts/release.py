@@ -40,14 +40,24 @@ with open(config, "r", encoding="utf-8") as f:
 
 SPECIFICATION_FOLDER = CURRENT_WORKING_DIRECTORY / "publicatie" / pubDomain / shortName
 
-def create_redirect_for_version(publishVersion):
-    with open(f'{SPECIFICATION_FOLDER}/index.html', 'w') as root_index_file:
-        root_index_file.write(f"""<!DOCTYPE html>
+def generate_html_for_redirect(publishVersion, location):
+    return f"""<!DOCTYPE html>
 <meta charset="utf-8">
 <title>Redirecting to v{publishVersion}</title>
-<meta http-equiv="refresh" content="0; URL=./{publishVersion}">
-<link rel="canonical" href="./{publishVersion}">
-""")
+<noscript>
+<meta http-equiv="refresh" content="0; URL={location}">
+</noscript>
+<link rel="canonical" href="{location}">
+<script>
+    const redirect = new URL("{location}", window.location);
+    redirect.hash = window.location.hash;
+    window.location = redirect;
+</script>
+"""
+
+def create_redirect_for_version(publishVersion):
+    with open(f'{SPECIFICATION_FOLDER}/index.html', 'w') as root_index_file:
+        root_index_file.write(generate_html_for_redirect(publishVersion, "./" + publishVersion))
 
     current_version = publishVersion
 
@@ -57,12 +67,7 @@ def create_redirect_for_version(publishVersion):
         os.makedirs(version_less_directory, exist_ok=True)
 
         with open(version_less_directory / 'index.html', 'w') as version_redirect_file:
-            version_redirect_file.write(f"""<!DOCTYPE html>
-    <meta charset="utf-8">
-    <title>Redirecting to v{publishVersion}</title>
-    <meta http-equiv="refresh" content="0; URL=../{publishVersion}">
-    <link rel="canonical" href="../{publishVersion}">
-    """)
+            version_redirect_file.write(generate_html_for_redirect(publishVersion, "../" + publishVersion))
 
         current_version = version_without_last_number
 
