@@ -8,6 +8,7 @@ muffet \
     --exclude 'upwork.com' \
     --exclude 'sitearchief.nl' \
     --exclude 'opengis.net' \
+    --exclude 'https://creativecommons.org/licenses/by/4.0/legalcode' \
     --exclude 'https://www.nen.nl/nen-7513-2024-nl-329182' \
     --header 'user-agent:Curl' \
     --ignore-fragments \
