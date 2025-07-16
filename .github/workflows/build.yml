@@ -21,8 +21,12 @@ jobs:
         if: ${{ github.event_name == 'push'}}
         run: |
          echo "grep=false" >> $GITHUB_OUTPUT
+         echo "commit=false" >> $GITHUB_OUTPUT
          if grep -q alternateFormats ./js/config.js; then
          echo "grep=true" >> $GITHUB_OUTPUT
+         fi
+         if grep -q commitResults ./js/config.js; then
+         echo "commit=true" >> $GITHUB_OUTPUT
          fi
       - name: PDF
         if: ${{ steps.config.outputs.grep == 'true' }}
@@ -38,3 +42,8 @@ jobs:
          node pdf.js      
          find *.pdf
          mv *.pdf ~/static/
+      - name: Commit
+        if: ${{ steps.config.outputs.commit == 'true' }}
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: [auto] newest version of HTML and PDF
