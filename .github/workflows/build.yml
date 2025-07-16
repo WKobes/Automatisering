@@ -46,4 +46,4 @@ jobs:
         if: ${{ steps.config.outputs.commit == 'true' }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: [auto] newest version of HTML and PDF
+          commit_message: '[auto] newest version of HTML and PDF'
