@@ -41,7 +41,7 @@ jobs:
          rm -f *.pdf
          node pdf.js      
          find *.pdf
-         mv *.pdf ~/static/
+         cp *.pdf ~/static/
       - name: Clean-up
         run: |
          rm pdf.js config.js package.json package-lock.json
