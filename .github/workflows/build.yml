@@ -42,6 +42,10 @@ jobs:
          node pdf.js      
          find *.pdf
          mv *.pdf ~/static/
+      - name: Clean-up
+        run: |
+         rm pdf.js config.js package.json package-lock.json
+         rm -r node_modules
       - name: Commit
         if: ${{ steps.config.outputs.commit == 'true' }}
         uses: stefanzweifel/git-auto-commit-action@v4
